@@ -60,7 +60,7 @@ choose or launch an AI client.
 Ask your agent:
 
 ```text
-Create the product docs onboarding request marked creating in
+From the cloned Supercharger project folder, create the product docs onboarding request marked creating in
 preps/<prep-id>/onboarding-requests.json.
 
 Use only the approved docs sources. Produce a product map, glossary, relevant

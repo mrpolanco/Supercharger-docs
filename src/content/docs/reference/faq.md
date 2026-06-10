@@ -65,7 +65,7 @@ process execution behind a browser button.
 Ask your agent:
 
 ```text
-Create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
+From the cloned Supercharger project folder, create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
 Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
 ```
 
@@ -82,7 +82,7 @@ suggestions. This avoids bloated curricula from irrelevant docs pages.
 Ask your agent:
 
 ```text
-Create the product docs onboarding request marked creating in
+From the cloned Supercharger project folder, create the product docs onboarding request marked creating in
 preps/<prep-id>/onboarding-requests.json.
 Use only the approved docs sources and flag unsupported assumptions.
 ```

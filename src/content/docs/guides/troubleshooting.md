@@ -181,7 +181,7 @@ Supercharger stays provider-neutral and inspectable.
 Ask your agent:
 
 ```text
-Create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
+From the cloned Supercharger project folder, create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
 Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
 ```
 
