@@ -42,6 +42,7 @@ export default defineConfig({
 						{ label: 'Generating a track', slug: 'guides/generating-a-track' },
 						{ label: 'Prepare me for this job', slug: 'guides/job-prep' },
 						{ label: 'Working through a lesson', slug: 'guides/lessons' },
+						{ label: 'Troubleshooting', slug: 'guides/troubleshooting' },
 					],
 				},
 				{
