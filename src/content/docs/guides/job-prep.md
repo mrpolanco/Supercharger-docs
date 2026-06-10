@@ -51,6 +51,10 @@ study plan into a sequenced checklist:
   a human nudge. For example, "How to use curl" should usually come before an
   API debugging track because it teaches the command-line tool used in later
   exercises.
+- **Add docs** lets the learner attach approved product docs or excerpts when
+  company-specific fluency matters. Supercharger queues a docs-onboarding item
+  so an agent can create a product map, glossary, support scenarios, and
+  product-specific practice from those sources.
 - **Confidence level** lets the learner choose beginner, intermediate, or
   advanced before requesting a track. Beginner tracks define jargon before
   using it; advanced tracks skip basics and focus on edge cases.
@@ -61,8 +65,9 @@ study plan into a sequenced checklist:
 
 Supercharger does not secretly launch Codex, Claude Code, or Gemini from the
 browser. The app writes a file-based handoff (`curriculum.json` and
-`track-requests.json`) that any agent can read and act on. That keeps the
-platform provider-neutral and makes the state inspectable in Git.
+`track-requests.json`, plus `onboarding-requests.json` for product docs) that
+any agent can read and act on. That keeps the platform provider-neutral and
+makes the state inspectable in Git.
 
 ## Getting better preps
 
@@ -79,6 +84,9 @@ platform provider-neutral and makes the state inspectable in Git.
 - **Reorder for scaffolding.** If a prerequisite track lands too late, move it
   earlier. If the whole sequence feels wrong, ask the assistant to optimize
   the curriculum order instead of manually guessing every dependency.
+- **Approve docs intentionally.** Product docs can be large and uneven. Add the
+  pages or excerpts that matter for the role, then ask the assistant to skip
+  irrelevant docs and flag assumptions.
 - **Set the learner level honestly.** If a topic is new, choose beginner even
   if the role is senior. Beginner does not mean easy; it means the lesson
   should teach vocabulary before expecting it.
@@ -90,3 +98,6 @@ plan flags, then take each relevant track's closed-book final cold. Passing
 those is your evidence for an honest *"yes, I can do that"* in the interview.
 
 For a fuller example, see the [Product Support Specialist case study](/Supercharger-docs/case-studies/product-support-specialist/).
+
+For a deeper walkthrough of the docs flow, see
+[Product docs onboarding](/Supercharger-docs/guides/product-docs-onboarding/).

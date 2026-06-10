@@ -69,6 +69,8 @@ preps/<prep-id>/
 ├── plan.md               # ordered study plan linking tracks/lessons
 ├── interview-prep.md     # role-specific questions and talking points
 ├── curriculum.json       # optional ordered curriculum for the prep UI
+├── onboarding-requests.json # optional product-doc onboarding requests
+├── onboarding/<id>/source.md # optional pasted docs/excerpts
 └── track-requests.json   # optional requested tracks for agent handoff
 ```
 
@@ -83,7 +85,8 @@ requested gap tracks:
 ```json
 [
   { "id": "sql-fundamentals", "kind": "existing", "level": "beginner", "order": 1 },
-  { "id": "api-debugging-ai-support", "kind": "requested", "level": "intermediate", "order": 2 }
+  { "id": "readme-product-onboarding", "kind": "docs-onboarding", "level": "beginner", "order": 2 },
+  { "id": "api-debugging-ai-support", "kind": "requested", "level": "intermediate", "order": 3 }
 ]
 ```
 
@@ -94,6 +97,37 @@ lesson progress. If it does not, the item remains a request.
 The app can reorder `curriculum.json` when the learner moves tracks in the
 Curriculum tab. Agents should preserve intentional ordering unless asked to
 optimize the sequence.
+
+### Product docs onboarding
+
+`onboarding-requests.json` stores approved docs sources for product-specific
+practice:
+
+```json
+[
+  {
+    "id": "readme-product-onboarding",
+    "title": "ReadMe Product Onboarding",
+    "kind": "docs-onboarding",
+    "goal": "support-product",
+    "level": "beginner",
+    "docsUrl": "https://docs.example.com",
+    "sourcePath": "onboarding/readme-product-onboarding/source.md",
+    "notes": "Focus on API references, auth setup, and common support issues.",
+    "status": "suggested",
+    "createdBy": "User"
+  }
+]
+```
+
+Docs onboarding should create operational fluency, not a summary. Expected
+outputs include product map, glossary, relevant workflows, common failure
+modes, mock support tickets, customer reply practice, escalation-writing
+practice, final readiness assessment, and suggested tracks only for remaining
+gaps.
+
+Agents must use only approved source docs and flag assumptions when they infer
+behavior not directly supported by those sources.
 
 ### Track requests
 

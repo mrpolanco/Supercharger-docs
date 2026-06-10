@@ -61,6 +61,12 @@ Codex, Claude Code, Gemini CLI, or another agent can then read the repo and
 create the track. This keeps Supercharger provider-neutral and avoids hiding
 credentials or process execution behind a browser button.
 
+**Does Add docs crawl an entire documentation site?**
+No. It records approved docs URLs or pasted excerpts in
+`onboarding-requests.json`. The agent should use those approved sources to
+make product maps, glossaries, support scenarios, and product-specific track
+suggestions. This avoids bloated curricula from irrelevant docs pages.
+
 **Can I write tracks by hand?**
 Yes — a track is just a spec-compliant folder. Hand-written, generated, or
 hybrid all render identically.
