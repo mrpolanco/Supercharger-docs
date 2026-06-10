@@ -27,14 +27,22 @@ When something looks wrong, start here:
    ```
 
 3. If you changed server code, stopped a terminal, or pulled new changes, stop
-   the old process with **Ctrl+C** and run `npm run dev` again.
+   the old process with **Ctrl+C** and run the app again:
+
+   ```bash
+   npm run dev
+   ```
 
 4. Hard refresh the browser. A stale tab can keep showing old UI state after
    the local server has changed.
 
 ## What should be running?
 
-`npm run dev` starts two local services:
+This command starts two local services:
+
+```bash
+npm run dev
+```
 
 | Service | Address | What it does |
 |---|---|---|
@@ -65,7 +73,11 @@ Fix:
 
 1. Find the terminal where `npm run dev` is already running.
 2. Press **Ctrl+C**.
-3. Run `npm run dev` again.
+3. Run the app again:
+
+   ```bash
+   npm run dev
+   ```
 
 If you cannot find the old terminal, ask your agent:
 
@@ -247,4 +259,3 @@ Most Supercharger issues fit one of four buckets:
 That is the same troubleshooting pattern you use in technical support:
 separate the surface symptom from the system underneath, gather evidence, and
 fix the smallest confirmed cause first.
-

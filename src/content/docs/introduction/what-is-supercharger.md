@@ -23,8 +23,16 @@ checkpoint validation.
 
 ## The core loop
 
-1. **Ask for what you need.** *"Generate a track on Go."* *"Prep me for this
-   job posting."* Your assistant writes plain markdown/YAML content folders.
+1. **Ask for what you need.** Your assistant writes plain markdown/YAML
+   content folders.
+
+   ```text
+   Generate a track on Go for technical support roles.
+   ```
+
+   ```text
+   Generate the prep for preps/<prep-id>/.
+   ```
 2. **Learn in the app.** Concept lessons explain the *why* interviewers probe,
    end with "explain it out loud" prompts, and quiz for understanding.
    Hands-on lessons are framed as realistic support tickets in deliberately

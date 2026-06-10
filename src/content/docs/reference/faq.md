@@ -61,11 +61,26 @@ Codex, Claude Code, Gemini CLI, or another agent can then read the repo and
 create the track. This keeps Supercharger provider-neutral and avoids hiding
 credentials or process execution behind a browser button.
 
+Ask your agent:
+
+```text
+Create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
+Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
+```
+
 **Does Add docs crawl an entire documentation site?**
 No. It records approved docs URLs or pasted excerpts in
 `onboarding-requests.json`. The agent should use those approved sources to
 make product maps, glossaries, support scenarios, and product-specific track
 suggestions. This avoids bloated curricula from irrelevant docs pages.
+
+Ask your agent:
+
+```text
+Create the product docs onboarding request marked creating in
+preps/<prep-id>/onboarding-requests.json.
+Use only the approved docs sources and flag unsupported assumptions.
+```
 
 **Can I write tracks by hand?**
 Yes — a track is just a spec-compliant folder. Hand-written, generated, or
