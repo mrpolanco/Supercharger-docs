@@ -91,6 +91,10 @@ The app treats `tracks/<id>/track.yaml` as the source of truth for whether a
 track is ready. If the folder exists, the Curriculum tab shows **Start** and
 lesson progress. If it does not, the item remains a request.
 
+The app can reorder `curriculum.json` when the learner moves tracks in the
+Curriculum tab. Agents should preserve intentional ordering unless asked to
+optimize the sequence.
+
 ### Track requests
 
 `track-requests.json` gives agents and the GUI a machine-readable creation

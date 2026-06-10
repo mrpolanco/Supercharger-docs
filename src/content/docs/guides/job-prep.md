@@ -47,6 +47,10 @@ study plan into a sequenced checklist:
 - **Add track** lets the learner suggest a new topic, such as "how to use
   curl." Supercharger inserts that request into the curriculum so an agent can
   place it in the right study order.
+- **Reorder** lets the learner move tracks up or down when the sequence needs
+  a human nudge. For example, "How to use curl" should usually come before an
+  API debugging track because it teaches the command-line tool used in later
+  exercises.
 - **Confidence level** lets the learner choose beginner, intermediate, or
   advanced before requesting a track. Beginner tracks define jargon before
   using it; advanced tracks skip basics and focus on edge cases.
@@ -72,6 +76,9 @@ platform provider-neutral and makes the state inspectable in Git.
 - **Use the curriculum as the source of truth.** If the written plan and the
   Curriculum tab drift, ask the assistant to reconcile `plan.md`,
   `curriculum.json`, and `track-requests.json`.
+- **Reorder for scaffolding.** If a prerequisite track lands too late, move it
+  earlier. If the whole sequence feels wrong, ask the assistant to optimize
+  the curriculum order instead of manually guessing every dependency.
 - **Set the learner level honestly.** If a topic is new, choose beginner even
   if the role is senior. Beginner does not mean easy; it means the lesson
   should teach vocabulary before expecting it.
