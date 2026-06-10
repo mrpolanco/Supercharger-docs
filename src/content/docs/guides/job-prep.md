@@ -39,8 +39,10 @@ study plan into a sequenced checklist:
 - **Existing tracks** show lesson progress and a **Start** button. When every
   lesson in the track is complete, the curriculum marks it complete.
 - **Suggested gap tracks** show a **Create** button. Clicking it marks the
-  request as `creating` and shows a waiting indicator until an agent creates
-  the matching `tracks/<track-id>/track.yaml` folder.
+  request as `creating`, changes the button to **Queued for agent**, and
+  shows a copyable prompt. Paste that prompt into Codex, Claude Code, Gemini
+  CLI, or another assistant from the Supercharger project folder. The GUI does
+  not choose or launch an AI client for you.
 - **Ready tracks** switch to **Start** as soon as the track exists on disk.
 - **Modify** records an optimization request for an existing track, useful when
   a learner wants a revised version before retaking.
@@ -68,6 +70,16 @@ browser. The app writes a file-based handoff (`curriculum.json` and
 `track-requests.json`, plus `onboarding-requests.json` for product docs) that
 any agent can read and act on. That keeps the platform provider-neutral and
 makes the state inspectable in Git.
+
+The normal handoff looks like this:
+
+```text
+Create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
+Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
+```
+
+After the assistant creates the track folder, refresh the Curriculum tab. The
+button changes from **Queued for agent** to **Start**.
 
 ## Getting better preps
 

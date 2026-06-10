@@ -52,8 +52,10 @@ Supercharger creates an item in the Curriculum tab and writes the request to
 ## Generate practice
 
 Click **Generate practice** on the docs-onboarding item. The app marks the
-request as `creating`; an agent can then read the approved source files and
-create the actual practice materials.
+request as `creating`, changes the button to **Queued for agent**, and shows a
+copyable prompt. Paste that prompt into Codex, Claude Code, Gemini CLI, or
+another assistant from the Supercharger project folder. The browser does not
+choose or launch an AI client.
 
 Ask your agent:
 
@@ -115,4 +117,3 @@ another agent can then act on those files.
 
 That keeps the flow inspectable, local-first, and safer for support learners:
 you can see what sources were approved and what assumptions were made.
-

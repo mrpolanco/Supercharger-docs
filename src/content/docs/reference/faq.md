@@ -57,9 +57,10 @@ the same topic.
 
 **Does the Create button launch an AI agent?**
 No. It records the request in `track-requests.json` and marks it `creating`.
-Codex, Claude Code, Gemini CLI, or another agent can then read the repo and
-create the track. This keeps Supercharger provider-neutral and avoids hiding
-credentials or process execution behind a browser button.
+The GUI then shows a copyable prompt. Paste that prompt into Codex, Claude
+Code, Gemini CLI, or another assistant from the Supercharger project folder.
+This keeps Supercharger provider-neutral and avoids hiding credentials or
+process execution behind a browser button.
 
 Ask your agent:
 
@@ -67,6 +68,10 @@ Ask your agent:
 Create the requested tracks marked creating in preps/<prep-id>/track-requests.json.
 Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
 ```
+
+When the assistant finishes, refresh the Curriculum tab. If
+`tracks/<track-id>/track.yaml` exists and is valid, the button changes to
+**Start**.
 
 **Does Add docs crawl an entire documentation site?**
 No. It records approved docs URLs or pasted excerpts in
