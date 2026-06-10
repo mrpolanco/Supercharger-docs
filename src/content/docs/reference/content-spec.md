@@ -82,8 +82,8 @@ requested gap tracks:
 
 ```json
 [
-  { "id": "sql-fundamentals", "kind": "existing", "order": 1 },
-  { "id": "api-debugging-ai-support", "kind": "requested", "order": 2 }
+  { "id": "sql-fundamentals", "kind": "existing", "level": "beginner", "order": 1 },
+  { "id": "api-debugging-ai-support", "kind": "requested", "level": "intermediate", "order": 2 }
 ]
 ```
 
@@ -101,6 +101,8 @@ queue:
   {
     "id": "api-debugging-ai-support",
     "title": "API Debugging for AI Product Support",
+    "level": "intermediate",
+    "depth": "standard",
     "priority": "high",
     "reason": "The role emphasizes customer API debugging and command-line reproduction.",
     "status": "suggested",
@@ -116,12 +118,36 @@ the track's `track.yaml`, for example:
 ```yaml
 title: API Debugging for AI Product Support
 description: Reproduce customer API issues with curl, request IDs, auth headers, and escalation notes.
+level: intermediate
+depth: standard
 createdBy: Codex
 sourcePrep: product-support-specialist
 lessons:
   - 01-reading-api-docs
   - 02-auth-header-mistakes
 ```
+
+### Learner level and depth
+
+Tracks and requests should set `level`:
+
+| Level | Use when |
+|---|---|
+| `beginner` | The learner has job context but does not yet know the tool, acronyms, or workflow. Define jargon before using it. |
+| `intermediate` | The learner knows the basics and needs realistic support-ticket practice. |
+| `advanced` | The learner is ready for edge cases, tradeoffs, and harder closed-book screens. |
+
+Use `depth` to set the bar:
+
+| Depth | Typical shape |
+|---|---|
+| `primer` | 4-6 lessons for a compact foundation. |
+| `standard` | 6-8 lessons for most job-ready tracks. |
+| `deep-dive` | 8-10 lessons for advanced or broad topics. |
+
+Six lessons is a reference pattern, not a rule. Do not pad a narrow topic, and
+do not compress a broad beginner topic so much that it starts using unexplained
+jargon.
 
 ## Progress
 

@@ -42,6 +42,19 @@ requested gap tracks, shows lesson completion where a track already exists,
 and lets you queue missing tracks for an agent to create. When the track folder
 appears on disk, the button changes from a waiting state to **Start**.
 
+**Which confidence level should I choose?**
+Choose **Beginner** when the topic or vocabulary is new, even if you are
+experienced in support. Choose **Intermediate** when you know the basics but
+need realistic ticket practice. Choose **Advanced** when you want edge cases,
+tradeoffs, and harder screens. The level tells the agent how much jargon it
+must define before expecting you to use it.
+
+**Why does Go deeper stop at advanced?**
+Supercharger should help you build mastery, not create an infinite syllabus.
+After an advanced track, the better next step is usually practice, a final
+assessment, or a different adjacent skill rather than another deeper track on
+the same topic.
+
 **Does the Create button launch an AI agent?**
 No. It records the request in `track-requests.json` and marks it `creating`.
 Codex, Claude Code, Gemini CLI, or another agent can then read the repo and

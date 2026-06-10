@@ -47,6 +47,13 @@ study plan into a sequenced checklist:
 - **Add track** lets the learner suggest a new topic, such as "how to use
   curl." Supercharger inserts that request into the curriculum so an agent can
   place it in the right study order.
+- **Confidence level** lets the learner choose beginner, intermediate, or
+  advanced before requesting a track. Beginner tracks define jargon before
+  using it; advanced tracks skip basics and focus on edge cases.
+- **Go deeper** appears after a non-advanced track is complete. It queues an
+  advanced follow-up based on the completed track. Advanced tracks do not get
+  another deeper suggestion, because the goal is mastery without endless track
+  sprawl.
 
 Supercharger does not secretly launch Codex, Claude Code, or Gemini from the
 browser. The app writes a file-based handoff (`curriculum.json` and
@@ -65,6 +72,9 @@ platform provider-neutral and makes the state inspectable in Git.
 - **Use the curriculum as the source of truth.** If the written plan and the
   Curriculum tab drift, ask the assistant to reconcile `plan.md`,
   `curriculum.json`, and `track-requests.json`.
+- **Set the learner level honestly.** If a topic is new, choose beginner even
+  if the role is senior. Beginner does not mean easy; it means the lesson
+  should teach vocabulary before expecting it.
 
 ## Before the screen
 
