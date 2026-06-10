@@ -53,6 +53,27 @@ If the web UI loads but content is missing, suspect the API server first.
 
 ## Common symptoms
 
+### `node`, `npm`, or `git` command not found
+
+Likely cause: a required setup tool is not installed yet, or the terminal was
+opened before the installer finished.
+
+Fix:
+
+1. Install [Node.js LTS](https://nodejs.org/).
+2. Install [Git](https://git-scm.com/downloads), or clone the project with
+   [GitHub Desktop](https://desktop.github.com/).
+3. Close and reopen Terminal.
+4. Check again:
+
+   ```bash
+   node --version
+   npm --version
+   git --version
+   ```
+If the version commands work, return to the
+[Quickstart](/Supercharger-docs/introduction/quickstart/).
+
 ### The browser says it cannot connect
 
 Likely cause: the app is not running.

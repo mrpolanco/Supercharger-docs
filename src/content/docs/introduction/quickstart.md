@@ -5,25 +5,90 @@ description: Clone, install, run, and generate your first track.
 
 ## Prerequisites
 
-- **Node 20+**
-- **Docker** (Docker Desktop or OrbStack) — required only for lessons with a
-  terminal; theory tracks work without it
-- An AI coding assistant CLI (Claude Code, Codex, Gemini CLI, …) for
-  generating content
+Install these first:
+
+| Component | Why you need it | Easiest install link |
+|---|---|---|
+| Node.js 20 or newer | Runs the local Supercharger app. | [Download Node.js LTS](https://nodejs.org/) |
+| Git | Downloads the Supercharger project. | [Download Git](https://git-scm.com/downloads) or use [GitHub Desktop](https://desktop.github.com/) |
+| Docker Desktop or OrbStack | Runs hands-on terminal lessons. Theory lessons work without it. | [Docker Desktop](https://www.docker.com/products/docker-desktop/) or [OrbStack for Mac](https://orbstack.dev/) |
+| AI coding assistant CLI | Generates tracks and job-prep files. | Use the assistant you already have, such as Codex, Claude Code, or Gemini CLI. |
+
+If you are new to this, install **Node.js LTS**, **GitHub Desktop**, and
+**Docker Desktop**. Open Docker Desktop once before starting any lesson with a
+terminal.
+
+Check that Node is installed:
+
+```bash
+node --version
+npm --version
+```
+
+If those commands print version numbers, you are ready to continue.
 
 ## Install and run
+
+Download the project:
 
 ```bash
 git clone https://github.com/mrpolanco/Supercharger
 cd Supercharger
+```
+
+If you used GitHub Desktop instead, clone `mrpolanco/Supercharger`, then open
+the cloned folder in Terminal.
+
+Install dependencies and start Supercharger:
+
+```bash
 npm install
 npm run dev
 ```
 
-Open **http://localhost:4401**. The bundled reference track — *SQL
+Leave that terminal open while using Supercharger. Closing it stops the app.
+
+Open:
+
+```text
+http://localhost:4401
+```
+
+The bundled reference track — *SQL
 Fundamentals for Support Engineers* — is ready to use: start with lesson 1
 (theory) or jump to lesson 2 and hit **Start environment** for a live Postgres
 sandbox.
+
+## If the app will not start
+
+Supercharger uses two local ports:
+
+| Port | Used by |
+|---|---|
+| `4401` | The page you open in the browser. |
+| `4400` | The local API the page talks to. |
+
+If you see **port already in use**, an old copy of Supercharger is probably
+still running.
+
+Try this first:
+
+1. Look for the old Terminal window running `npm run dev`.
+2. Press **Ctrl+C** in that terminal.
+3. Start again:
+
+   ```bash
+   npm run dev
+   ```
+
+If you cannot find the old terminal, ask your assistant:
+
+```text
+Find and stop the stale Supercharger processes on ports 4400 and 4401, then restart npm run dev.
+```
+
+For more symptoms, use the
+[Troubleshooting guide](/Supercharger-docs/guides/troubleshooting/).
 
 ## Generate your first track
 
