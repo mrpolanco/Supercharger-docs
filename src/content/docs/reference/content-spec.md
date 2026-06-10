@@ -11,7 +11,7 @@ everything ports unchanged to any future implementation.
 
 ```
 tracks/<track-id>/
-├── track.yaml            # title, description, ordered lesson list
+├── track.yaml            # title, description, optional provenance, ordered lesson list
 ├── <lesson-id>/
 │   ├── lesson.md         # frontmatter (title) + GFM body
 │   └── sandbox/          # optional — Dockerfile presence enables the terminal
@@ -64,12 +64,64 @@ when every checkpoint passes.
 ```
 preps/<prep-id>/
 ├── job-posting.md        # written by the app
+├── resume.md             # optional, written by the app
 ├── analysis.md           # requirements → skills; inferred items flagged
 ├── plan.md               # ordered study plan linking tracks/lessons
-└── interview-prep.md     # role-specific questions and talking points
+├── interview-prep.md     # role-specific questions and talking points
+├── curriculum.json       # optional ordered curriculum for the prep UI
+└── track-requests.json   # optional requested tracks for agent handoff
 ```
 
-Any `.md` files in a prep render as tabs in the app.
+Any `.md` files in a prep render as tabs in the app. `curriculum.json` renders
+as the Curriculum tab when present.
+
+### Curriculum
+
+`curriculum.json` defines the best study order across existing tracks and
+requested gap tracks:
+
+```json
+[
+  { "id": "sql-fundamentals", "kind": "existing", "order": 1 },
+  { "id": "api-debugging-ai-support", "kind": "requested", "order": 2 }
+]
+```
+
+The app treats `tracks/<id>/track.yaml` as the source of truth for whether a
+track is ready. If the folder exists, the Curriculum tab shows **Start** and
+lesson progress. If it does not, the item remains a request.
+
+### Track requests
+
+`track-requests.json` gives agents and the GUI a machine-readable creation
+queue:
+
+```json
+[
+  {
+    "id": "api-debugging-ai-support",
+    "title": "API Debugging for AI Product Support",
+    "priority": "high",
+    "reason": "The role emphasizes customer API debugging and command-line reproduction.",
+    "status": "suggested",
+    "createdBy": "Codex"
+  }
+]
+```
+
+The app may update `status` to `creating` or `modify-requested`. An external
+agent reads that state, creates or revises the track, and records provenance in
+the track's `track.yaml`, for example:
+
+```yaml
+title: API Debugging for AI Product Support
+description: Reproduce customer API issues with curl, request IDs, auth headers, and escalation notes.
+createdBy: Codex
+sourcePrep: product-support-specialist
+lessons:
+  - 01-reading-api-docs
+  - 02-auth-header-mistakes
+```
 
 ## Progress
 

@@ -36,6 +36,18 @@ clear requirements, but the same structure works for internal support
 enablement: reusable runbooks, practice tickets, onboarding tracks, and
 technical refreshers for recurring customer issues.
 
+**What is the Curriculum tab?**
+It is the ordered study view for a prep. It combines existing tracks and
+requested gap tracks, shows lesson completion where a track already exists,
+and lets you queue missing tracks for an agent to create. When the track folder
+appears on disk, the button changes from a waiting state to **Start**.
+
+**Does the Create button launch an AI agent?**
+No. It records the request in `track-requests.json` and marks it `creating`.
+Codex, Claude Code, Gemini CLI, or another agent can then read the repo and
+create the track. This keeps Supercharger provider-neutral and avoids hiding
+credentials or process execution behind a browser button.
+
 **Can I write tracks by hand?**
 Yes — a track is just a spec-compliant folder. Hand-written, generated, or
 hybrid all render identically.

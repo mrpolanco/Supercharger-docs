@@ -26,9 +26,32 @@ customer segment, or recurring support issue into concrete practice.
 
    | File | What it gives you |
    |---|---|
+   | `curriculum` | The suggested learning order across existing tracks and requested gap tracks. Existing tracks show progress and can be started immediately; requested tracks can be queued for an agent to create. |
    | `analysis.md` | Each requirement broken into concrete skills. Inferred requirements are explicitly flagged (*"posting says 'identity providers' — assuming Okta/SAML; confirm if you know their stack"*) so you can correct assumptions early. |
    | `plan.md` | An ordered study plan: which tracks/lessons cover each requirement, what to skim vs. drill, and new tracks generated for genuine gaps. |
    | `interview-prep.md` | Role-specific: likely screen questions with model answers and follow-up chains, plus talking points read between the lines of the posting (their stack, their customer profile, what "log analysis" means at that company). |
+
+## Curriculum tab
+
+The **Curriculum** tab is the operational view of a prep. It turns the written
+study plan into a sequenced checklist:
+
+- **Existing tracks** show lesson progress and a **Start** button. When every
+  lesson in the track is complete, the curriculum marks it complete.
+- **Suggested gap tracks** show a **Create** button. Clicking it marks the
+  request as `creating` and shows a waiting indicator until an agent creates
+  the matching `tracks/<track-id>/track.yaml` folder.
+- **Ready tracks** switch to **Start** as soon as the track exists on disk.
+- **Modify** records an optimization request for an existing track, useful when
+  a learner wants a revised version before retaking.
+- **Add track** lets the learner suggest a new topic, such as "how to use
+  curl." Supercharger inserts that request into the curriculum so an agent can
+  place it in the right study order.
+
+Supercharger does not secretly launch Codex, Claude Code, or Gemini from the
+browser. The app writes a file-based handoff (`curriculum.json` and
+`track-requests.json`) that any agent can read and act on. That keeps the
+platform provider-neutral and makes the state inspectable in Git.
 
 ## Getting better preps
 
@@ -39,6 +62,9 @@ customer segment, or recurring support issue into concrete practice.
 - **Mind the scope.** Gaps can mean new full tracks. The agent contract tells
   assistants to ask before generating more than one large track, so you stay
   in control of the time budget.
+- **Use the curriculum as the source of truth.** If the written plan and the
+  Curriculum tab drift, ask the assistant to reconcile `plan.md`,
+  `curriculum.json`, and `track-requests.json`.
 
 ## Before the screen
 
