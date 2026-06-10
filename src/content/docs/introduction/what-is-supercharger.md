@@ -1,12 +1,17 @@
 ---
 title: What is Supercharger?
-description: An open-source learning platform where your AI coding assistant is the curriculum engine.
+description: Local-first technical enablement for support engineers.
 ---
 
-Supercharger is an open-source, local-first learning platform for building
-**job-ready technical skills** — the kind tested in interview screens and used
-on day one: SQL, API debugging, Bash, OAuth/SSO, SSL troubleshooting, a new
-language, whatever the role demands.
+Supercharger is an open-source, local-first technical enablement tool for
+support engineers. It helps turn skill gaps, role requirements, and recurring
+support issues into structured learning tracks with realistic practice tickets,
+quizzes, Docker sandboxes, and checkpoint validation.
+
+Support teams are constantly learning: new products, new APIs, new failure
+modes, new customer environments. Supercharger turns that learning into
+repeatable tracks and validated practice instead of scattered notes and
+passive reading.
 
 The twist: **Supercharger doesn't come with a course catalog. It comes with a
 contract.** Your AI coding assistant (Claude Code, Codex, Gemini CLI — any
@@ -47,15 +52,20 @@ prep. You get:
   telemetry.
 - **Not a content marketplace.** Tracks are folders in your repo. Share them
   as you would any code.
-- **Not magic.** A track gets you to solid practitioner depth in the common
-  80% — exactly what screens test. The long tail comes from doing the job;
-  Supercharger's goal is the foundation and vocabulary to expand fast.
+- **Not a replacement for production experience.** A track gets you to solid
+  practitioner depth in the common 80% — exactly what screens and onboarding
+  often test. The long tail comes from doing the job.
+- **Not blind trust in generated content.** Generated tracks still require
+  human review, especially before sharing with a team.
+- **Not a hardened untrusted-code platform.** Sandboxes are local and
+  disposable, but they are intended for content you control or have reviewed.
 
 ## Why this design
 
 Supercharger treats the LLM as a **content compiler with a verifiable output
-contract**: the spec constrains the format, the quality bar constrains the
+contract**. The spec constrains the format, the quality bar constrains the
 substance, and sandbox check scripts validate that exercises actually work.
-The app stays small and frozen; the content grows. That separation is also
-what makes every track portable — plain markdown that would survive a total
-rewrite of the app.
+
+The assistant can generate a lesson, but the learner still has to solve the
+ticket and pass the checks. That is the important line: Supercharger emphasizes
+verified practice over generated confidence.

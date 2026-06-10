@@ -24,6 +24,18 @@ actually validate. Substance still varies with the model and your prompt —
 iterate: tell the assistant what's shallow and have it revise. The bundled SQL
 track is the calibration reference.
 
+**Does Supercharger trust AI-generated lessons?**
+No. The assistant writes content against a spec, but sandbox lessons still need
+executable checks and human review. The strongest Supercharger tracks are not
+"AI said this is correct" artifacts; they are structured practice environments
+where the learner has to solve the ticket and pass validation.
+
+**Is this only for interview prep?**
+No. Interview prep is the sharpest first use case because job postings provide
+clear requirements, but the same structure works for internal support
+enablement: reusable runbooks, practice tickets, onboarding tracks, and
+technical refreshers for recurring customer issues.
+
 **Can I write tracks by hand?**
 Yes — a track is just a spec-compliant folder. Hand-written, generated, or
 hybrid all render identically.

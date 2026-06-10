@@ -7,6 +7,10 @@ The prep workflow is the organizing feature of Supercharger: a job posting
 becomes the unit of study, and tracks become the building blocks a prep
 assembles.
 
+This is also where Supercharger works as a support-team enablement tool. A
+posting is just one input; the same workflow can map a new product surface,
+customer segment, or recurring support issue into concrete practice.
+
 ## Workflow
 
 1. **Save the posting.** In the app: **New job prep** → name it (e.g.
@@ -41,3 +45,5 @@ assembles.
 Drill the track-level `interview-prep.md` question banks for every skill the
 plan flags, then take each relevant track's closed-book final cold. Passing
 those is your evidence for an honest *"yes, I can do that"* in the interview.
+
+For a fuller example, see the [Product Support Specialist case study](/Supercharger-docs/case-studies/product-support-specialist/).

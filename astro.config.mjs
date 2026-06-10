@@ -28,6 +28,15 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Case studies',
+					items: [
+						{
+							label: 'Product Support Specialist',
+							slug: 'case-studies/product-support-specialist',
+						},
+					],
+				},
+				{
 					label: 'Guides',
 					items: [
 						{ label: 'Generating a track', slug: 'guides/generating-a-track' },
