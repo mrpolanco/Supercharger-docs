@@ -5,8 +5,8 @@ import starlight from '@astrojs/starlight';
 // For GitHub Pages at https://<user>.github.io/<repo>/ keep `base: '/<repo>'`.
 // With a custom domain, set `site` to it and remove `base`.
 export default defineConfig({
-	site: 'https://richcodestudios.github.io',
-	base: '/supercharger',
+	site: 'https://mrpolanco.github.io',
+	base: '/Supercharger-docs',
 	integrations: [
 		starlight({
 			title: 'Supercharger',
@@ -16,7 +16,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/richcodestudios/supercharger',
+					href: 'https://github.com/mrpolanco/Supercharger',
 				},
 			],
 			sidebar: [

@@ -14,8 +14,8 @@ description: Clone, install, run, and generate your first track.
 ## Install and run
 
 ```bash
-git clone https://github.com/richcodestudios/supercharger
-cd supercharger
+git clone https://github.com/mrpolanco/Supercharger
+cd Supercharger
 npm install
 npm run dev
 ```
