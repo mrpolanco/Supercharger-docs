@@ -71,6 +71,7 @@ Fix:
    npm --version
    git --version
    ```
+
 If the version commands work, return to the
 [Quickstart](/Supercharger-docs/introduction/quickstart/).
 
