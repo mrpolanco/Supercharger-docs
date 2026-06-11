@@ -20,8 +20,9 @@ for that exact lesson — seeded data, broken configs, whatever the scenario
 needs.
 
 - **Start environment** builds and launches the container (first run pulls
-  the base image; later runs are fast). You get a real `bash` shell, with
-  `/work` as your scratch directory and `nano`/`vim` available.
+  the base image; later runs are fast). You get a real `bash` shell that
+  opens where the exercise's files live, with `/work` as your scratch
+  directory for notes and answers, and `nano`/`vim` available.
 - **Reset** destroys the container and starts a fresh one — experiments are
   free, and a wrecked environment costs nothing.
 - **Check my work** runs the lesson's validation script *inside* the

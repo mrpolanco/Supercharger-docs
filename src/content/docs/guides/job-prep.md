@@ -55,8 +55,28 @@ study plan into a sequenced checklist:
   CLI, or another assistant from the Supercharger project folder. The GUI does
   not choose or launch an AI client for you.
 - **Ready tracks** switch to **Start** as soon as the track exists on disk.
-- **Modify** records an optimization request for an existing track, useful when
-  a learner wants a revised version before retaking.
+- **Modify** queues a change request for an existing track — useful when a
+  learner wants a revised version before retaking, or when a generic track
+  should be tuned toward this job. The form asks what should change, where
+  the change should land, and the target level:
+  - **Update the shared track** changes it for everyone, including other
+    preps that use it.
+  - **Make a copy for this prep** forks the track (e.g.
+    `how-to-use-curl-acme-tse`), leaves the original — and other preps'
+    progress — untouched, and repoints this prep's curriculum at the copy.
+
+  Supercharger picks a sensible default: fork when the track belongs to or is
+  used by another prep (the form names those preps), update in place when the
+  track is this prep's own. If the prep generation spotted a job-specific
+  tuning opportunity, the form shows it as a one-tap **Suggested for this
+  job** chip drawn from the posting.
+
+  After submitting, the card shows **Modification queued for agent** with a
+  copyable prompt, exactly like track creation.
+- **Tuned-for tags.** A track modified for a prep shows a **tuned for this
+  prep** pill in that prep's curriculum (and on the track page). If a shared
+  track was tuned for a *different* prep, the pill names it — so you know the
+  content has been slanted toward someone else's job description.
 - **Add track** lets the learner suggest a new topic, such as "how to use
   curl." Supercharger inserts that request into the curriculum so an agent can
   place it in the right study order.
@@ -89,8 +109,23 @@ From the cloned Supercharger project folder, create the requested tracks marked 
 Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
 ```
 
-After the assistant creates the track folder, refresh the Curriculum tab. The
-button changes from **Queued for agent** to **Start**.
+Track modifications use a variant of the same handoff (shown on the queued
+card): it tells the agent to honor each request's notes, target level, and
+mode — updating in place or copying to the fork id — and to flip the request
+back to `created` when done.
+
+While anything is queued, the Curriculum tab polls every few seconds and
+updates itself when the agent finishes — **Queued for agent** becomes
+**Start** without a manual refresh.
+
+## Deleting a prep
+
+**Delete prep** (in the Curriculum tab's actions) removes the prep folder —
+posting, analysis, plan, interview prep. Before deleting, it lists every
+track that was *created for* or *tuned for* this prep with a checkbox each,
+so you can keep all, some, or none of them. Tracks default to **kept**;
+anything also used by another prep is flagged (*"careful: also used by
+…"*) before you check it. Your `progress.json` is never touched.
 
 ## Resume tab and the resume library
 

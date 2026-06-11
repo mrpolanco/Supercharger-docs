@@ -41,8 +41,24 @@ A fenced code block with language `quiz` containing **valid JSON**:
 ## Sandboxes
 
 The runner builds the lesson's `sandbox/` directory, runs it with 512 MB / 1
-CPU limits, and attaches the terminal via `bash -l` in `/work`. Images must
-include `bash`, create `/work`, and provide an executable `check` on `PATH`.
+CPU limits, and attaches the terminal via `bash -l`. Images must include
+`bash`, create `/work`, and provide an executable `check` on `PATH`.
+
+### Terminal working directory
+
+The terminal opens in `/work` by default. When the exercise's files live
+elsewhere, the image declares it so the learner lands where the work is:
+
+```dockerfile
+LABEL supercharger.workdir="/var/www/site"
+```
+
+Keep the `/work` default only when starting away from the files is the point
+(e.g. filesystem navigation is the skill) — and then the lesson must say
+where the files are. Every command shown in a lesson body must work verbatim
+from the directory the terminal opens in, and lessons must warn where a
+correct command legitimately prints nothing (grep with no match), so silence
+isn't mistaken for a broken environment.
 
 ### The check contract
 
@@ -84,11 +100,18 @@ requested gap tracks:
 
 ```json
 [
-  { "id": "sql-fundamentals", "kind": "existing", "level": "beginner", "order": 1 },
+  { "id": "sql-fundamentals", "kind": "existing", "level": "beginner", "order": 1,
+    "modificationHints": "Posting emphasizes log investigation — consider a log-table query scenario." },
   { "id": "readme-product-onboarding", "kind": "docs-onboarding", "level": "beginner", "order": 2 },
   { "id": "api-debugging-ai-support", "kind": "requested", "level": "intermediate", "order": 3 }
 ]
 ```
+
+`modificationHints` is an optional per-item string written during prep
+generation: a job-posting-specific suggestion for how an existing track could
+be tuned for this role. The app surfaces it as a one-tap suggestion when the
+learner opens the Modify form. Agents should only write it where the posting
+genuinely suggests a tuning — never generic advice.
 
 The app treats `tracks/<id>/track.yaml` as the source of truth for whether a
 track is ready. If the folder exists, the Curriculum tab shows **Start** and
@@ -150,8 +173,9 @@ queue:
 ```
 
 The app may update `status` to `creating` or `modify-requested`. An external
-agent reads that state, creates or revises the track, and records provenance in
-the track's `track.yaml`, for example:
+agent reads that state, creates or revises the track, sets `status` back to
+`created` when done, and records provenance in the track's `track.yaml`, for
+example:
 
 ```yaml
 title: API Debugging for AI Product Support
@@ -161,10 +185,30 @@ depth: standard
 icon: world
 createdBy: Codex
 sourcePrep: product-support-specialist
+modifiedFor: [acme-tse]   # preps this track was later tuned for
+modifiedBy: Claude Code   # tool that applied the latest modification
 lessons:
   - 01-reading-api-docs
   - 02-auth-header-mistakes
 ```
+
+### Modification requests
+
+A `modify-requested` entry carries `modificationNotes` (what to change), an
+optional target `level`, and a `mode`:
+
+- `mode: "in-place"` — revise the track where it is, and add the prep's id to
+  `modifiedFor` (plus `modifiedBy`) in its `track.yaml`. The app renders
+  `modifiedFor` as a *tuned for* tag — green in the prep it was tuned for, a
+  warning in any other prep using the same track.
+- `mode: "fork"` — leave the original untouched. The request includes a
+  `forkTo` id (`<track>-<prep>`); the agent copies the track there, applies
+  the changes to the copy with `parentTrack`, `sourcePrep`, and `modifiedFor`
+  set, and repoints the prep's `curriculum.json` at the fork.
+
+Agents should keep lesson directory ids stable during in-place modifications
+when the learner has progress on them, because `progress.json` keys by
+`<track>/<lesson>`.
 
 `icon` is optional and picks the duotone icon shown on the track card (e.g.
 `disk` for SQL, `world` for APIs, `bug` for debugging, `chip` for CLI tools).

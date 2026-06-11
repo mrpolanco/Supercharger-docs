@@ -51,5 +51,25 @@ terminal pane and a **Check my work** button; the check logic runs entirely
 inside the container. Theory lessons render as markdown with inline quizzes
 and need no Docker at all.
 
+## Sandbox UX guarantees
+
+The contract requires assistants to *build and run* every sandbox before
+shipping it, not just write plausible files:
+
+- The terminal opens where the exercise's files are (sandboxes declare it
+  with a `supercharger.workdir` image label; `/work` is the default). The
+  only exception is when navigating to the files is itself the skill being
+  taught — and then the lesson says where they are.
+- Every command shown in the lesson body is verified verbatim from that
+  directory, including tool wrappers that shouldn't depend on the current
+  directory.
+- Where a correct command prints nothing (like `grep` with no match), the
+  lesson warns you, so silence isn't mistaken for a broken terminal.
+- The check script is verified both ways: a fresh container fails the right
+  checkpoints, and the intended solution passes all of them.
+
+If a sandbox still misbehaves, report it like a bug — the fix belongs in the
+track, and `/audit-track` checks all of the above.
+
 Use the bundled `tracks/sql-fundamentals/` as the reference for what good
 output looks like.
