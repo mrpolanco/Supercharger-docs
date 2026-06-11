@@ -17,12 +17,16 @@ customer segment, or recurring support issue into concrete practice.
    `acme-tse`) → paste the full posting → save. This writes
    `preps/acme-tse/job-posting.md`.
 
+   ![Job posting tab in a sample prep](/Supercharger-docs/screenshots/job-posting.png)
+
    Optionally attach a resume from the chooser on the same screen: pick a
    saved resume from the library, paste one for this prep only, or skip it.
    Attaching a resume enables the gap analysis — the assistant marks each
    requirement as covered by your experience vs. a genuine gap, and
    prioritizes tracks accordingly. The resume is copied into
    `preps/acme-tse/resume.md`.
+
+   ![Resume-to-posting map showing requirement coverage and gaps](/Supercharger-docs/screenshots/resume-to-posting-map.png)
 2. **Generate.** In your assistant, from the repo root:
 
    ```text
@@ -45,12 +49,18 @@ customer segment, or recurring support issue into concrete practice.
    | `analysis` | Each requirement broken into concrete skills. Inferred requirements are explicitly flagged (*"posting says 'identity providers' — assuming Okta/SAML; confirm if you know their stack"*) so you can correct assumptions early. |
    | `plan` | An ordered study plan: which tracks/lessons cover each requirement, what to skim vs. drill, and new tracks generated for genuine gaps. |
    | `interview-prep` | Role-specific: likely screen questions with model answers and follow-up chains, plus talking points read between the lines of the posting (their stack, their customer profile, what "log analysis" means at that company). |
-   | `curriculum` | The suggested learning order across existing tracks and requested gap tracks. Existing tracks show progress and can be started immediately; requested tracks can be queued for an agent to create. Fills green only when every track in it is complete. |
+  | `curriculum` | The suggested learning order across existing tracks and requested gap tracks. Existing tracks show progress and can be started immediately; requested tracks can be queued for an agent to create. Fills green only when every track in it is complete. |
+
+![Generated study plan tab for a sample prep](/Supercharger-docs/screenshots/prep-study-plan.png)
+
+![Generated interview prep tab with likely questions and model answers](/Supercharger-docs/screenshots/interview-prep.png)
 
 ## Curriculum tab
 
 The **Curriculum** tab is the operational view of a prep. It turns the written
 study plan into a sequenced checklist:
+
+![Curriculum tab showing existing tracks, suggested gap tracks, and progress](/Supercharger-docs/screenshots/prep-tracks.png)
 
 - **Existing tracks** show lesson progress and a **Start** button. When every
   lesson in the track is complete, the curriculum marks it complete.
@@ -183,7 +193,9 @@ from *genuine gap*, and `plan.md` spends your time only on the gaps.
   irrelevant docs and flag assumptions.
 - **Set the learner level honestly.** If a topic is new, choose beginner even
   if the role is senior. Beginner does not mean easy; it means the lesson
-  should teach vocabulary before expecting it.
+should teach vocabulary before expecting it.
+
+![Prep resources tab showing generated resource recommendations](/Supercharger-docs/screenshots/prep-resources.png)
 
 ## Before the screen
 
