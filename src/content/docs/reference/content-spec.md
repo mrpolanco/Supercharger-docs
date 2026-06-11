@@ -158,12 +158,18 @@ title: API Debugging for AI Product Support
 description: Reproduce customer API issues with curl, request IDs, auth headers, and escalation notes.
 level: intermediate
 depth: standard
+icon: world
 createdBy: Codex
 sourcePrep: product-support-specialist
 lessons:
   - 01-reading-api-docs
   - 02-auth-header-mistakes
 ```
+
+`icon` is optional and picks the duotone icon shown on the track card (e.g.
+`disk` for SQL, `world` for APIs, `bug` for debugging, `chip` for CLI tools).
+The repo's `SPEC.md` lists all allowed names; without it the app guesses from
+keywords in the title and description.
 
 ### Learner level and depth
 
