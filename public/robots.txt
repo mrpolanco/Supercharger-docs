@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supercharger.richpolanco.com/sitemap-index.xml

@@ -1,11 +1,12 @@
 ---
 title: What is Supercharger?
-description: Local-first technical enablement for support engineers.
+description: A local-first technical readiness platform for support engineers, job prep, AI-generated tracks, and Docker-validated practice.
 ---
 
 Supercharger is an open-source, local-first technical enablement tool for
-support engineers. It helps turn skill gaps, role requirements, and recurring
-support issues into structured learning tracks with realistic practice tickets,
+support engineers, solutions engineers, SREs, TAMs, DevRel teams, and junior
+engineers. It helps turn skill gaps, role requirements, and recurring support
+issues into structured learning tracks with realistic practice tickets,
 quizzes, Docker sandboxes, and checkpoint validation.
 
 Support teams are constantly learning: new products, new APIs, new failure
