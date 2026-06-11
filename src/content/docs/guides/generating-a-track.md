@@ -26,6 +26,24 @@ Useful qualifiers:
 - **Name the interview.** *"I have a live screen that includes a debugging
   exercise"* biases the track toward timed, closed-book practice.
 
+## Requesting a track from the app
+
+You don't need an open agent session to *plan* a track. The home screen's
+**Add track** button records a standalone request — title, why, confidence
+level — in `track-requests.json` at the repo root, not tied to any job prep.
+It appears as a dashed card among your tracks; click **Create** when you're
+ready and paste the prompt it shows into your agent. The card becomes a
+normal track the moment the agent writes the folder (`/next-track` also picks
+these up).
+
+The home screen also helps you navigate a growing library:
+
+- A **sort** control orders tracks by length (shortest/longest first),
+  completion (closest to finished / least started), or title — the choice
+  persists across sessions.
+- Tracks referenced by a job prep carry **prep tags**, so you can tell at a
+  glance which tracks belong to which prep and which are standalone.
+
 ## What the quality bar guarantees
 
 `AGENTS.md` requires every generated track to include:

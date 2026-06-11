@@ -188,6 +188,12 @@ queue:
 ]
 ```
 
+Requests live in two places with the same entry format: per prep at
+`preps/<prep-id>/track-requests.json`, and — for standalone tracks not tied
+to any prep — a `track-requests.json` at the **repo root**, written by the
+home screen's **Add track** button. Standalone tracks omit `sourcePrep` from
+their `track.yaml`.
+
 The app may update `status` to `creating` or `modify-requested`. An external
 agent reads that state, creates or revises the track, sets `status` back to
 `created` when done, and records provenance in the track's `track.yaml`, for

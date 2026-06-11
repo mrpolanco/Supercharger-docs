@@ -64,6 +64,13 @@ After an advanced track, the better next step is usually practice, a final
 assessment, or a different adjacent skill rather than another deeper track on
 the same topic.
 
+**Can I request a track that isn't tied to a job prep?**
+Yes — the home screen's **Add track** button records a standalone request in
+`track-requests.json` at the repo root. It shows as a dashed card among your
+tracks; **Create** queues it for your agent exactly like prep gap tracks.
+Track cards also show prep tags, so prep-owned and standalone tracks are
+distinguishable at a glance.
+
 **Does the Create button launch an AI agent?**
 No. It records the request in `track-requests.json` and marks it `creating`.
 The GUI then shows a copyable prompt. Paste that prompt into Codex, Claude

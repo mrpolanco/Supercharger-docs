@@ -32,15 +32,20 @@ customer segment, or recurring support issue into concrete practice.
    Or, in Claude Code or Gemini CLI, use the repo's slash command:
    `/prep acme-tse` (see [Slash commands](/Supercharger-docs/guides/slash-commands/)).
 
-3. **Study.** The prep appears in the app as tabs:
+3. **Study.** The prep appears in the app as tabs, laid out in
+   completion-flow order — inputs first, then the generated artifacts, then
+   the study view. Each completed step's tab fills **green**; generated
+   artifacts that don't exist yet show as dimmed, unclickable steps until the
+   agent writes them, so the tab row doubles as a progress tracker:
 
-   | File | What it gives you |
+   | Tab (in order) | What it gives you |
    |---|---|
-   | `curriculum` | The suggested learning order across existing tracks and requested gap tracks. Existing tracks show progress and can be started immediately; requested tracks can be queued for an agent to create. |
-   | `analysis.md` | Each requirement broken into concrete skills. Inferred requirements are explicitly flagged (*"posting says 'identity providers' — assuming Okta/SAML; confirm if you know their stack"*) so you can correct assumptions early. |
-   | `plan.md` | An ordered study plan: which tracks/lessons cover each requirement, what to skim vs. drill, and new tracks generated for genuine gaps. |
-   | `interview-prep.md` | Role-specific: likely screen questions with model answers and follow-up chains, plus talking points read between the lines of the posting (their stack, their customer profile, what "log analysis" means at that company). |
-   | `resume` | The resume attached to this prep, plus controls to attach, replace, or save it to the resume library. Present even when no resume is attached yet. |
+   | `job-posting` | The posting you pasted — the prep's source of truth. |
+   | `resume` | The resume attached to this prep, plus controls to attach, replace, or save it to the resume library. Present (but not green) even when no resume is attached yet. |
+   | `analysis` | Each requirement broken into concrete skills. Inferred requirements are explicitly flagged (*"posting says 'identity providers' — assuming Okta/SAML; confirm if you know their stack"*) so you can correct assumptions early. |
+   | `plan` | An ordered study plan: which tracks/lessons cover each requirement, what to skim vs. drill, and new tracks generated for genuine gaps. |
+   | `interview-prep` | Role-specific: likely screen questions with model answers and follow-up chains, plus talking points read between the lines of the posting (their stack, their customer profile, what "log analysis" means at that company). |
+   | `curriculum` | The suggested learning order across existing tracks and requested gap tracks. Existing tracks show progress and can be started immediately; requested tracks can be queued for an agent to create. Fills green only when every track in it is complete. |
 
 ## Curriculum tab
 
@@ -81,7 +86,15 @@ study plan into a sequenced checklist:
   curl." Supercharger inserts that request into the curriculum so an agent can
   place it in the right study order.
 - **Reorder** lets the learner move tracks up or down when the sequence needs
-  a human nudge. For example, "How to use curl" should usually come before an
+  a human nudge.
+
+  :::tip[Pace your track creation]
+  Don't queue every suggested track at once. The flow that works: **add** all
+  the tracks you'll need, **reorder** them into study order, then **create**
+  them one at a time as you reach them. Generating many tracks in one agent
+  session is slow, and tracks created later can be tuned with what you've
+  learned along the way.
+  ::: For example, "How to use curl" should usually come before an
   API debugging track because it teaches the command-line tool used in later
   exercises.
 - **Add docs** lets the learner attach approved product docs or excerpts when
@@ -120,7 +133,8 @@ updates itself when the agent finishes — **Queued for agent** becomes
 
 ## Deleting a prep
 
-**Delete prep** (in the Curriculum tab's actions) removes the prep folder —
+**Delete prep** (in the prep page's header, next to the title — visible from
+every tab) removes the prep folder —
 posting, analysis, plan, interview prep. Before deleting, it lists every
 track that was *created for* or *tuned for* this prep with a checkbox each,
 so you can keep all, some, or none of them. Tracks default to **kept**;
