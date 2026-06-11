@@ -21,6 +21,22 @@ tracks/<track-id>/
 └── resources.md          # recommended
 ```
 
+## Lesson conventions
+
+Inside `lesson.md` bodies:
+
+- `> **Tip:** …` blockquotes render as highlighted callouts.
+- Conceptual sections end with **"Explain it"** verbal-articulation prompts.
+- **Tool mentions**: when a lesson *uses* a tool it doesn't *teach*, it gives
+  a one-line survival hint at first mention (e.g. *"`nano` — Ctrl+O saves,
+  Ctrl+X exits"*) rather than assuming familiarity. External links are
+  reserved for concept-sized topics, point only at official references (man
+  pages, the tool's own docs — never blogs or tutorial sites), appear at
+  first mention only, and are calibrated to the track's level. A lesson
+  needing more than two or three such links is assuming too much for its
+  level — the fix is teaching the tool or changing the level, not more
+  links.
+
 ## Quiz blocks
 
 A fenced code block with language `quiz` containing **valid JSON**:

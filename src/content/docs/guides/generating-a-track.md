@@ -16,7 +16,7 @@ Generate a track on Bash scripting for technical support roles.
 
 In Claude Code or Gemini CLI you can use the repo's slash command instead:
 `/track Bash scripting for technical support roles` (see
-[Slash commands](/guides/slash-commands/)).
+[Slash commands](/Supercharger-docs/guides/slash-commands/)).
 
 Useful qualifiers:
 
@@ -39,6 +39,10 @@ Useful qualifiers:
 4. **`resources.md`** — the one book worth buying, the best free resource,
    and what to skip.
 5. **A closed-book final assessment** mirroring a real screen.
+6. **No unexplained tools.** A tool a lesson uses but doesn't teach comes
+   with a one-line survival hint at first mention (how to save and exit the
+   editor, what flag includes headers); links go only to official references
+   and only for concept-sized topics.
 
 If a generated track falls short, say so — *"lesson 3 is too shallow, go
 deeper on connection pooling"* — and have the assistant revise. The content is
@@ -73,3 +77,14 @@ track, and `/audit-track` checks all of the above.
 
 Use the bundled `tracks/sql-fundamentals/` as the reference for what good
 output looks like.
+
+## Auditing and deleting tracks
+
+`/audit-track <id>` re-checks an existing track against the quality bar
+without editing it — useful after generating with a different assistant or
+before sharing a track.
+
+To remove a track, use the **✕** button on its card on the home page (it
+asks for confirmation, then deletes the track folder from disk), or just
+delete `tracks/<id>/` yourself. Your `progress.json` is never touched, so
+regenerating the same track id later restores your completion state.

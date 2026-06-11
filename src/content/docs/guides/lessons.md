@@ -29,8 +29,19 @@ needs.
   container and reports pass/fail per checkpoint, with hints on failure.
   When every checkpoint passes, the lesson is marked complete automatically.
 
+### The Files tab
+
+Next to the terminal there's a **Files** tab: a browser for everything under
+`/work` in the running sandbox, with a plain textarea editor. Click a file to
+open it, edit, and **Save** (or Cmd/Ctrl+S) — changes land directly in the
+container, so the check script sees them just like edits made with `nano` or
+`vim`. Use it when wrestling a terminal editor isn't the skill the lesson is
+teaching; use the terminal when it is.
+
 Sandboxes are resource-capped (512 MB / 1 CPU), removed on exit, and never
-touch your host machine.
+touch your host machine. The **Stop server** button in the top bar shuts
+Supercharger down cleanly and removes every running sandbox container; the
+server also cleans up orphaned containers the next time it starts.
 
 ## Scenario tickets and finals
 

@@ -30,7 +30,7 @@ customer segment, or recurring support issue into concrete practice.
    ```
 
    Or, in Claude Code or Gemini CLI, use the repo's slash command:
-   `/prep acme-tse` (see [Slash commands](/guides/slash-commands/)).
+   `/prep acme-tse` (see [Slash commands](/Supercharger-docs/guides/slash-commands/)).
 
 3. **Study.** The prep appears in the app as tabs:
 

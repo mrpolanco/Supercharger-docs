@@ -119,6 +119,11 @@ prep as tabs in the app — plus new tracks for any skills nothing covers yet.
 - **Check my work** validates sandbox exercises checkpoint-by-checkpoint and
   marks the lesson complete when everything passes.
 - **Reset** recreates the sandbox from scratch — experiments are free.
+- The **Files** tab next to the terminal lets you browse and edit the
+  sandbox's `/work` files in the browser — no `vim` required unless the
+  lesson is teaching it.
+- The top bar has a **light/dark mode** toggle and a **Stop server** button
+  that shuts everything down and removes all sandbox containers.
 - Progress lives in `progress.json`; content updates never touch it.
 
 If something does not appear, a button waits forever, or a sandbox fails to
