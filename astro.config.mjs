@@ -40,6 +40,7 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						{ label: 'Generating a track', slug: 'guides/generating-a-track' },
+						{ label: 'Slash commands', slug: 'guides/slash-commands' },
 						{ label: 'Prepare me for this job', slug: 'guides/job-prep' },
 						{ label: 'Product docs onboarding', slug: 'guides/product-docs-onboarding' },
 						{ label: 'Working through a lesson', slug: 'guides/lessons' },

@@ -22,6 +22,9 @@ customer segment, or recurring support issue into concrete practice.
    Generate the prep for preps/acme-tse/.
    ```
 
+   Or, in Claude Code or Gemini CLI, use the repo's slash command:
+   `/prep acme-tse` (see [Slash commands](/guides/slash-commands/)).
+
 3. **Study.** The prep appears in the app as tabs:
 
    | File | What it gives you |

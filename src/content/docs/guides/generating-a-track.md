@@ -14,6 +14,10 @@ final. You don't write it — your assistant does, against the contract in
 Generate a track on Bash scripting for technical support roles.
 ```
 
+In Claude Code or Gemini CLI you can use the repo's slash command instead:
+`/track Bash scripting for technical support roles` (see
+[Slash commands](/guides/slash-commands/)).
+
 Useful qualifiers:
 
 - **Target the role.** *"…for a TSE role at a SaaS company"* gets you
