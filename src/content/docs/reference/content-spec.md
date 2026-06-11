@@ -3,7 +3,7 @@ title: Content spec
 description: The format contract for tracks, lessons, quizzes, sandboxes, and preps.
 ---
 
-This page summarizes `SPEC.md` — the contract between content and app.
+This page summarizes `SPEC.md` - the contract between content and app.
 Content is plain markdown/YAML with **zero references to the runtime**, so
 everything ports unchanged to any future implementation.
 
@@ -14,7 +14,7 @@ tracks/<track-id>/
 ├── track.yaml            # title, description, optional provenance, ordered lesson list
 ├── <lesson-id>/
 │   ├── lesson.md         # frontmatter (title) + GFM body
-│   └── sandbox/          # optional — Dockerfile presence enables the terminal
+│   └── sandbox/          # optional - Dockerfile presence enables the terminal
 │       ├── Dockerfile
 │       └── …             # seed data, scripts
 ├── interview-prep.md     # recommended
@@ -28,13 +28,13 @@ Inside `lesson.md` bodies:
 - `> **Tip:** …` blockquotes render as highlighted callouts.
 - Conceptual sections end with **"Explain it"** verbal-articulation prompts.
 - **Tool mentions**: when a lesson *uses* a tool it doesn't *teach*, it gives
-  a one-line survival hint at first mention (e.g. *"`nano` — Ctrl+O saves,
+  a one-line survival hint at first mention (e.g. *"`nano` - Ctrl+O saves,
   Ctrl+X exits"*) rather than assuming familiarity. External links are
   reserved for concept-sized topics, point only at official references (man
-  pages, the tool's own docs — never blogs or tutorial sites), appear at
+  pages, the tool's own docs - never blogs or tutorial sites), appear at
   first mention only, and are calibrated to the track's level. A lesson
   needing more than two or three such links is assuming too much for its
-  level — the fix is teaching the tool or changing the level, not more
+  level - the fix is teaching the tool or changing the level, not more
   links.
 
 ## Quiz blocks
@@ -70,7 +70,7 @@ LABEL supercharger.workdir="/var/www/site"
 ```
 
 Keep the `/work` default only when starting away from the files is the point
-(e.g. filesystem navigation is the skill) — and then the lesson must say
+(e.g. filesystem navigation is the skill) - and then the lesson must say
 where the files are. Every command shown in a lesson body must work verbatim
 from the directory the terminal opens in, and lessons must warn where a
 correct command legitimately prints nothing (grep with no match), so silence
@@ -117,7 +117,7 @@ requested gap tracks:
 ```json
 [
   { "id": "sql-fundamentals", "kind": "existing", "level": "beginner", "order": 1,
-    "modificationHints": "Posting emphasizes log investigation — consider a log-table query scenario." },
+    "modificationHints": "Posting emphasizes log investigation - consider a log-table query scenario." },
   { "id": "readme-product-onboarding", "kind": "docs-onboarding", "level": "beginner", "order": 2 },
   { "id": "api-debugging-ai-support", "kind": "requested", "level": "intermediate", "order": 3 }
 ]
@@ -127,7 +127,7 @@ requested gap tracks:
 generation: a job-posting-specific suggestion for how an existing track could
 be tuned for this role. The app surfaces it as a one-tap suggestion when the
 learner opens the Modify form. Agents should only write it where the posting
-genuinely suggests a tuning — never generic advice.
+genuinely suggests a tuning - never generic advice.
 
 The app treats `tracks/<id>/track.yaml` as the source of truth for whether a
 track is ready. If the folder exists, the Curriculum tab shows **Start** and
@@ -189,8 +189,8 @@ queue:
 ```
 
 Requests live in two places with the same entry format: per prep at
-`preps/<prep-id>/track-requests.json`, and — for standalone tracks not tied
-to any prep — a `track-requests.json` at the **repo root**, written by the
+`preps/<prep-id>/track-requests.json`, and - for standalone tracks not tied
+to any prep - a `track-requests.json` at the **repo root**, written by the
 home screen's **Add track** button. Standalone tracks omit `sourcePrep` from
 their `track.yaml`.
 
@@ -219,11 +219,11 @@ lessons:
 A `modify-requested` entry carries `modificationNotes` (what to change), an
 optional target `level`, and a `mode`:
 
-- `mode: "in-place"` — revise the track where it is, and add the prep's id to
+- `mode: "in-place"` - revise the track where it is, and add the prep's id to
   `modifiedFor` (plus `modifiedBy`) in its `track.yaml`. The app renders
-  `modifiedFor` as a *tuned for* tag — green in the prep it was tuned for, a
+  `modifiedFor` as a *tuned for* tag - green in the prep it was tuned for, a
   warning in any other prep using the same track.
-- `mode: "fork"` — leave the original untouched. The request includes a
+- `mode: "fork"` - leave the original untouched. The request includes a
   `forkTo` id (`<track>-<prep>`); the agent copies the track there, applies
   the changes to the copy with `parentTrack`, `sourcePrep`, and `modifiedFor`
   set, and repoints the prep's `curriculum.json` at the fork.

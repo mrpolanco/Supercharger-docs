@@ -4,21 +4,21 @@ description: Common questions about Supercharger.
 ---
 
 **Which AI assistants work?**
-Any agent that can read repository files and write content — Claude Code,
+Any agent that can read repository files and write content - Claude Code,
 Codex, Gemini CLI, IDE agents like Cursor, and similar. `AGENTS.md` is the
 cross-tool contract; `CLAUDE.md` simply points to it.
 
 **Can I paste the prompts into ChatGPT / claude.ai / a chat website?**
 Not by itself. The prompts assume an *agentic* assistant launched in (or
-pointed at) the cloned Supercharger folder, because the output is files —
-`tracks/<id>/…`, `preps/<id>/…` — that the assistant must write to disk. A
+pointed at) the cloned Supercharger folder, because the output is files -
+`tracks/<id>/…`, `preps/<id>/…` - that the assistant must write to disk. A
 browser chat box can't see your folder or save files into it. If a chat
 interface is all you have, you'd have to manually copy every generated file
-into the right paths per `SPEC.md` — possible, but the agent CLIs make this a
+into the right paths per `SPEC.md` - possible, but the agent CLIs make this a
 one-line ask instead.
 
 **Does it cost anything to run?**
-No. Supercharger has no API keys and makes no model calls — generation happens
+No. Supercharger has no API keys and makes no model calls - generation happens
 through whatever assistant subscription you already have. The app itself is
 free, MIT-licensed, and fully local.
 
@@ -29,7 +29,7 @@ portions of every track) work without Docker running.
 **How good is generated content, really?**
 The agent contract enforces structure (scenario tickets, interview banks,
 tiered resources, closed-book finals) and the check scripts verify exercises
-actually validate. Substance still varies with the model and your prompt —
+actually validate. Substance still varies with the model and your prompt -
 iterate: tell the assistant what's shallow and have it revise. The bundled SQL
 track is the calibration reference.
 
@@ -65,7 +65,7 @@ assessment, or a different adjacent skill rather than another deeper track on
 the same topic.
 
 **Can I request a track that isn't tied to a job prep?**
-Yes — the home screen's **Add track** button records a standalone request in
+Yes - the home screen's **Add track** button records a standalone request in
 `track-requests.json` at the repo root. It shows as a dashed card among your
 tracks; **Create** queues it for your agent exactly like prep gap tracks.
 Track cards also show prep tags, so prep-owned and standalone tracks are
@@ -104,7 +104,7 @@ Use only the approved docs sources and flag unsupported assumptions.
 ```
 
 **Can I write tracks by hand?**
-Yes — a track is just a spec-compliant folder. Hand-written, generated, or
+Yes - a track is just a spec-compliant folder. Hand-written, generated, or
 hybrid all render identically.
 
 **Is my data shared anywhere?**
@@ -117,7 +117,7 @@ No. `progress.json` and `preps/` are personal state; tracks you've generated
 are yours. Pulling a new app version touches `server/` and `web/` only.
 
 **Why not just ask the assistant questions directly?**
-You can — but structured curricula with validated hands-on labs, spaced
+You can - but structured curricula with validated hands-on labs, spaced
 drilling, and closed-book assessment is how familiarity becomes interview-
 ready competence. Supercharger turns one-off answers into a course you can
 finish and a claim you can defend.

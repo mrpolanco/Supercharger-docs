@@ -22,20 +22,20 @@ terminal.
 
 The assistant must be **agentic**: able to read and write files on your
 machine. Tracks and preps are folders of markdown/YAML that the assistant
-creates directly in the cloned project — so a chat website (chatgpt.com,
+creates directly in the cloned project - so a chat website (chatgpt.com,
 claude.ai, gemini.google.com) **will not work** by itself, because it can't
 see or edit your files. The prompts Supercharger shows you are meant to be
 pasted into an agent, not a chat box.
 
 What works:
 
-- **Agent CLIs** — Claude Code, Codex CLI, Gemini CLI, and similar. Open a
+- **Agent CLIs** - Claude Code, Codex CLI, Gemini CLI, and similar. Open a
   terminal **in the cloned Supercharger folder**, launch the agent, and paste
   the prompt. The agent finds `AGENTS.md` and `SPEC.md` on its own.
-- **IDE agents** (Cursor, VS Code with an agent mode, etc.) — open the
+- **IDE agents** (Cursor, VS Code with an agent mode, etc.) - open the
   Supercharger folder as the workspace first.
 - **Desktop apps with file access** (e.g. Claude Desktop pointed at the
-  folder) — only if the app can actually create and edit files there.
+  folder) - only if the app can actually create and edit files there.
 
 Whatever you use, the rule is the same: the assistant must be *running in or
 pointed at the Supercharger project folder* before you paste the prompt. If
@@ -78,8 +78,8 @@ Open:
 http://localhost:4401
 ```
 
-The bundled reference track — *SQL
-Fundamentals for Support Engineers* — is ready to use: start with lesson 1
+The bundled reference track - *SQL
+Fundamentals for Support Engineers* - is ready to use: start with lesson 1
 (theory) or jump to lesson 2 and hit **Start environment** for a live Postgres
 sandbox.
 
@@ -136,15 +136,15 @@ Generate the prep for preps/<name>/.
 ```
 
 You'll get the requirements analysis, study plan, and role-specific interview
-prep as tabs in the app — plus new tracks for any skills nothing covers yet.
+prep as tabs in the app - plus new tracks for any skills nothing covers yet.
 
 ## Day-to-day
 
 - **Check my work** validates sandbox exercises checkpoint-by-checkpoint and
   marks the lesson complete when everything passes.
-- **Reset** recreates the sandbox from scratch — experiments are free.
+- **Reset** recreates the sandbox from scratch - experiments are free.
 - The **Files** tab next to the terminal lets you browse and edit the
-  sandbox's `/work` files in the browser — no `vim` required unless the
+  sandbox's `/work` files in the browser - no `vim` required unless the
   lesson is teaching it.
 - The top bar has a **light/dark mode** toggle and a **Stop server** button
   that shuts everything down and removes all sandbox containers.

@@ -10,8 +10,8 @@ and the sandbox runner are the product; the app shell is disposable.**
 
 ```
 supercharger/
-├── server/    # Node/Express — content APIs + Docker sandbox runner
-├── web/       # Vite + React — lesson UI, quizzes, xterm.js terminal
+├── server/    # Node/Express - content APIs + Docker sandbox runner
+├── web/       # Vite + React - lesson UI, quizzes, xterm.js terminal
 ├── tracks/    # content: skill curricula (markdown/YAML)
 ├── preps/     # content: job preparation packs
 ├── SPEC.md    # content format contract

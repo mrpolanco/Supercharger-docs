@@ -15,7 +15,7 @@ repeatable tracks and validated practice instead of scattered notes and
 passive reading.
 
 The twist: **Supercharger doesn't come with a course catalog. It comes with a
-contract.** Your AI coding assistant (Claude Code, Codex, Gemini CLI — any
+contract.** Your AI coding assistant (Claude Code, Codex, Gemini CLI - any
 agent that can read a repo) generates the curriculum on demand, following a
 documented format (`SPEC.md`) and quality bar (`AGENTS.md`). The app renders
 what the agent writes: guided markdown lessons with inline quizzes, an
@@ -43,7 +43,7 @@ checkpoint validation.
 
    ![Track lessons list showing concept lessons, support tickets, and final assessment](/screenshots/track-lessons.png)
 3. **Prove it.** "Check my work" runs validation inside the sandbox. Every
-   track ends with a closed-book assessment that mirrors a real screen — pass
+   track ends with a closed-book assessment that mirrors a real screen - pass
    it cold and you can honestly claim the skill in an interview.
 
    ![Hands-on lesson with integrated terminal and checkpoint validation](/screenshots/track-lesson-terminal.png)
@@ -55,11 +55,11 @@ prep. You get:
 
 ![Job posting tab in a sample prep](/screenshots/job-posting.png)
 
-- **`analysis.md`** — requirements broken into skills, with inferred
+- **`analysis.md`** - requirements broken into skills, with inferred
   requirements explicitly flagged rather than silently guessed.
-- **`plan.md`** — an ordered study plan mapping requirements to tracks and
+- **`plan.md`** - an ordered study plan mapping requirements to tracks and
   lessons, with skim-vs-drill guidance. Missing skills get new tracks.
-- **`interview-prep.md`** — role-specific: likely screen questions, model
+- **`interview-prep.md`** - role-specific: likely screen questions, model
   answers, the follow-up chains interviewers chain on, and talking points
   derived from reading between the lines of the posting.
 
@@ -72,7 +72,7 @@ prep. You get:
 - **Not a content marketplace.** Tracks are folders in your repo. Share them
   as you would any code.
 - **Not a replacement for production experience.** A track gets you to solid
-  practitioner depth in the common 80% — exactly what screens and onboarding
+  practitioner depth in the common 80% - exactly what screens and onboarding
   often test. The long tail comes from doing the job.
 - **Not blind trust in generated content.** Generated tracks still require
   human review, especially before sharing with a team.

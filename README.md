@@ -1,6 +1,6 @@
 # Supercharger Docs
 
-Documentation site for [Supercharger](https://github.com/mrpolanco/Supercharger) — an open-source learning platform where your AI coding assistant is the curriculum engine.
+Documentation site for [Supercharger](https://github.com/mrpolanco/Supercharger) - an open-source learning platform where your AI coding assistant is the curriculum engine.
 
 **Live site:** https://supercharger.richpolanco.com/
 

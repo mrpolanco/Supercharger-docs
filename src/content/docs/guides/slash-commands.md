@@ -14,7 +14,7 @@ The commands are thin entry points: the actual contract still lives in
 |---|---|
 | `/track <topic> [level]` | Generate a new track. Example: `/track Go beginner` |
 | `/prep <id>` | Generate a job prep from `preps/<id>/job-posting.md` (runs the resume gap analysis if `resume.md` exists) |
-| `/audit-track <id>` | Check an existing track against the quality bar — read-only, reports findings without editing |
+| `/audit-track <id>` | Check an existing track against the quality bar - read-only, reports findings without editing |
 | `/next-track [prep-id]` | Pick the highest-priority pending entry in `track-requests.json` and generate that track |
 
 ## Which CLIs are supported?
@@ -22,10 +22,10 @@ The commands are thin entry points: the actual contract still lives in
 The prompts themselves are tool-neutral markdown files in `prompts/` in the
 Supercharger repo. Wrappers are wired up for:
 
-- **Claude Code** — via `.claude/commands/`. Type `/` in a session to see
+- **Claude Code** - via `.claude/commands/`. Type `/` in a session to see
   them listed with descriptions.
-- **Gemini CLI** — via `.gemini/commands/`. Type `/` to list.
-- **Codex and other CLIs** — no per-repo slash-command convention; instead
+- **Gemini CLI** - via `.gemini/commands/`. Type `/` to list.
+- **Codex and other CLIs** - no per-repo slash-command convention; instead
   say: `Follow the instructions in prompts/track.md: <your topic>`.
 
 Run commands from the Supercharger repo root so relative paths resolve.
