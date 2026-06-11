@@ -16,6 +16,13 @@ customer segment, or recurring support issue into concrete practice.
 1. **Save the posting.** In the app: **New job prep** → name it (e.g.
    `acme-tse`) → paste the full posting → save. This writes
    `preps/acme-tse/job-posting.md`.
+
+   Optionally attach a resume from the chooser on the same screen: pick a
+   saved resume from the library, paste one for this prep only, or skip it.
+   Attaching a resume enables the gap analysis — the assistant marks each
+   requirement as covered by your experience vs. a genuine gap, and
+   prioritizes tracks accordingly. The resume is copied into
+   `preps/acme-tse/resume.md`.
 2. **Generate.** In your assistant, from the repo root:
 
    ```text
@@ -33,6 +40,7 @@ customer segment, or recurring support issue into concrete practice.
    | `analysis.md` | Each requirement broken into concrete skills. Inferred requirements are explicitly flagged (*"posting says 'identity providers' — assuming Okta/SAML; confirm if you know their stack"*) so you can correct assumptions early. |
    | `plan.md` | An ordered study plan: which tracks/lessons cover each requirement, what to skim vs. drill, and new tracks generated for genuine gaps. |
    | `interview-prep.md` | Role-specific: likely screen questions with model answers and follow-up chains, plus talking points read between the lines of the posting (their stack, their customer profile, what "log analysis" means at that company). |
+   | `resume` | The resume attached to this prep, plus controls to attach, replace, or save it to the resume library. Present even when no resume is attached yet. |
 
 ## Curriculum tab
 
@@ -83,6 +91,28 @@ Follow SPEC.md and include createdBy and sourcePrep in each track.yaml.
 
 After the assistant creates the track folder, refresh the Curriculum tab. The
 button changes from **Queued for agent** to **Start**.
+
+## Resume tab and the resume library
+
+Every prep has a **Resume** tab, even before a resume is attached. From it you
+can:
+
+- **Attach a saved resume** from the library via the dropdown, or **paste one**
+  that applies to this prep only.
+- **Replace** the attached resume the same way. After replacing, re-run the
+  prep generation if you want the gap analysis updated.
+- **Save to resume library** to promote a pasted resume so it appears in the
+  saved list on every prep and on the New job prep screen.
+
+The **Resumes** page (top navigation) is the library itself: save a resume
+once under a name like `ios-engineer-2026`, then reuse it across preps instead
+of pasting it every time. Each prep gets its own copy of the resume on disk
+(`preps/<prep-id>/resume.md`), so editing or deleting a saved resume never
+touches existing preps.
+
+Why attach one at all: without a resume the prep treats every requirement as a
+gap to study. With one, `analysis.md` separates *covered by your experience*
+from *genuine gap*, and `plan.md` spends your time only on the gaps.
 
 ## Getting better preps
 

@@ -103,7 +103,8 @@ The assistant reads `AGENTS.md` (quality bar) and `SPEC.md` (format), writes
 
 ## Prep for a job
 
-1. In the app: **New job prep** → paste the posting → save.
+1. In the app: **New job prep** → paste the posting → optionally attach a
+   resume (saved or pasted) to enable the gap analysis → save.
 2. In your assistant:
 
 ```text
