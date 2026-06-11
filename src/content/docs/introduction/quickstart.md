@@ -18,6 +18,30 @@ If you are new to this, install **Node.js LTS**, **GitHub Desktop**, and
 **Docker Desktop**. Open Docker Desktop once before starting any lesson with a
 terminal.
 
+### What counts as an "AI coding assistant"?
+
+The assistant must be **agentic**: able to read and write files on your
+machine. Tracks and preps are folders of markdown/YAML that the assistant
+creates directly in the cloned project — so a chat website (chatgpt.com,
+claude.ai, gemini.google.com) **will not work** by itself, because it can't
+see or edit your files. The prompts Supercharger shows you are meant to be
+pasted into an agent, not a chat box.
+
+What works:
+
+- **Agent CLIs** — Claude Code, Codex CLI, Gemini CLI, and similar. Open a
+  terminal **in the cloned Supercharger folder**, launch the agent, and paste
+  the prompt. The agent finds `AGENTS.md` and `SPEC.md` on its own.
+- **IDE agents** (Cursor, VS Code with an agent mode, etc.) — open the
+  Supercharger folder as the workspace first.
+- **Desktop apps with file access** (e.g. Claude Desktop pointed at the
+  folder) — only if the app can actually create and edit files there.
+
+Whatever you use, the rule is the same: the assistant must be *running in or
+pointed at the Supercharger project folder* before you paste the prompt. If
+your assistant can't access the folder, the generated content has nowhere to
+land.
+
 Check that Node is installed:
 
 ```bash

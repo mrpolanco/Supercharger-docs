@@ -4,9 +4,18 @@ description: Common questions about Supercharger.
 ---
 
 **Which AI assistants work?**
-Any agent CLI that can read repository files and write content — Claude Code,
-Codex, Gemini CLI, and similar. `AGENTS.md` is the cross-tool contract;
-`CLAUDE.md` simply points to it.
+Any agent that can read repository files and write content — Claude Code,
+Codex, Gemini CLI, IDE agents like Cursor, and similar. `AGENTS.md` is the
+cross-tool contract; `CLAUDE.md` simply points to it.
+
+**Can I paste the prompts into ChatGPT / claude.ai / a chat website?**
+Not by itself. The prompts assume an *agentic* assistant launched in (or
+pointed at) the cloned Supercharger folder, because the output is files —
+`tracks/<id>/…`, `preps/<id>/…` — that the assistant must write to disk. A
+browser chat box can't see your folder or save files into it. If a chat
+interface is all you have, you'd have to manually copy every generated file
+into the right paths per `SPEC.md` — possible, but the agent CLIs make this a
+one-line ask instead.
 
 **Does it cost anything to run?**
 No. Supercharger has no API keys and makes no model calls — generation happens
