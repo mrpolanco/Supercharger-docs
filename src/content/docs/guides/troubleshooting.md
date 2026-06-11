@@ -73,7 +73,7 @@ Fix:
    ```
 
 If the version commands work, return to the
-[Quickstart](/Supercharger-docs/introduction/quickstart/).
+[Quickstart](/introduction/quickstart/).
 
 ### The browser says it cannot connect
 

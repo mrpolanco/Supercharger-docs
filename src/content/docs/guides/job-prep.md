@@ -17,7 +17,7 @@ customer segment, or recurring support issue into concrete practice.
    `acme-tse`) → paste the full posting → save. This writes
    `preps/acme-tse/job-posting.md`.
 
-   ![Job posting tab in a sample prep](/Supercharger-docs/screenshots/job-posting.png)
+   ![Job posting tab in a sample prep](/screenshots/job-posting.png)
 
    Optionally attach a resume from the chooser on the same screen: pick a
    saved resume from the library, paste one for this prep only, or skip it.
@@ -26,7 +26,7 @@ customer segment, or recurring support issue into concrete practice.
    prioritizes tracks accordingly. The resume is copied into
    `preps/acme-tse/resume.md`.
 
-   ![Resume-to-posting map showing requirement coverage and gaps](/Supercharger-docs/screenshots/resume-to-posting-map.png)
+   ![Resume-to-posting map showing requirement coverage and gaps](/screenshots/resume-to-posting-map.png)
 2. **Generate.** In your assistant, from the repo root:
 
    ```text
@@ -34,7 +34,7 @@ customer segment, or recurring support issue into concrete practice.
    ```
 
    Or, in Claude Code or Gemini CLI, use the repo's slash command:
-   `/prep acme-tse` (see [Slash commands](/Supercharger-docs/guides/slash-commands/)).
+   `/prep acme-tse` (see [Slash commands](/guides/slash-commands/)).
 
 3. **Study.** The prep appears in the app as tabs, laid out in
    completion-flow order — inputs first, then the generated artifacts, then
@@ -51,16 +51,16 @@ customer segment, or recurring support issue into concrete practice.
    | `interview-prep` | Role-specific: likely screen questions with model answers and follow-up chains, plus talking points read between the lines of the posting (their stack, their customer profile, what "log analysis" means at that company). |
   | `curriculum` | The suggested learning order across existing tracks and requested gap tracks. Existing tracks show progress and can be started immediately; requested tracks can be queued for an agent to create. Fills green only when every track in it is complete. |
 
-![Generated study plan tab for a sample prep](/Supercharger-docs/screenshots/prep-study-plan.png)
+![Generated study plan tab for a sample prep](/screenshots/prep-study-plan.png)
 
-![Generated interview prep tab with likely questions and model answers](/Supercharger-docs/screenshots/interview-prep.png)
+![Generated interview prep tab with likely questions and model answers](/screenshots/interview-prep.png)
 
 ## Curriculum tab
 
 The **Curriculum** tab is the operational view of a prep. It turns the written
 study plan into a sequenced checklist:
 
-![Curriculum tab showing existing tracks, suggested gap tracks, and progress](/Supercharger-docs/screenshots/prep-tracks.png)
+![Curriculum tab showing existing tracks, suggested gap tracks, and progress](/screenshots/prep-tracks.png)
 
 - **Existing tracks** show lesson progress and a **Start** button. When every
   lesson in the track is complete, the curriculum marks it complete.
@@ -195,7 +195,7 @@ from *genuine gap*, and `plan.md` spends your time only on the gaps.
   if the role is senior. Beginner does not mean easy; it means the lesson
 should teach vocabulary before expecting it.
 
-![Prep resources tab showing generated resource recommendations](/Supercharger-docs/screenshots/prep-resources.png)
+![Prep resources tab showing generated resource recommendations](/screenshots/prep-resources.png)
 
 ## Before the screen
 
@@ -203,7 +203,7 @@ Drill the track-level `interview-prep.md` question banks for every skill the
 plan flags, then take each relevant track's closed-book final cold. Passing
 those is your evidence for an honest *"yes, I can do that"* in the interview.
 
-For a fuller example, see the [Product Support Specialist case study](/Supercharger-docs/case-studies/product-support-specialist/).
+For a fuller example, see the [Product Support Specialist case study](/case-studies/product-support-specialist/).
 
 For a deeper walkthrough of the docs flow, see
-[Product docs onboarding](/Supercharger-docs/guides/product-docs-onboarding/).
+[Product docs onboarding](/guides/product-docs-onboarding/).

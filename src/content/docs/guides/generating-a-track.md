@@ -16,7 +16,7 @@ Generate a track on Bash scripting for technical support roles.
 
 In Claude Code or Gemini CLI you can use the repo's slash command instead:
 `/track Bash scripting for technical support roles` (see
-[Slash commands](/Supercharger-docs/guides/slash-commands/)).
+[Slash commands](/guides/slash-commands/)).
 
 Useful qualifiers:
 

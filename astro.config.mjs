@@ -2,11 +2,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// For GitHub Pages at https://<user>.github.io/<repo>/ keep `base: '/<repo>'`.
-// With a custom domain, set `site` to it and remove `base`.
+// Custom domain for GitHub Pages.
 export default defineConfig({
-	site: 'https://mrpolanco.github.io',
-	base: '/Supercharger-docs',
+	site: 'https://supercharger.richpolanco.com',
 	integrations: [
 		starlight({
 			title: 'Supercharger',

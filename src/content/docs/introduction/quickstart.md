@@ -112,7 +112,7 @@ Find and stop the stale Supercharger processes on ports 4400 and 4401, then rest
 ```
 
 For more symptoms, use the
-[Troubleshooting guide](/Supercharger-docs/guides/troubleshooting/).
+[Troubleshooting guide](/guides/troubleshooting/).
 
 ## Generate your first track
 
@@ -151,4 +151,4 @@ prep as tabs in the app — plus new tracks for any skills nothing covers yet.
 - Progress lives in `progress.json`; content updates never touch it.
 
 If something does not appear, a button waits forever, or a sandbox fails to
-start, use the [Troubleshooting guide](/Supercharger-docs/guides/troubleshooting/).
+start, use the [Troubleshooting guide](/guides/troubleshooting/).

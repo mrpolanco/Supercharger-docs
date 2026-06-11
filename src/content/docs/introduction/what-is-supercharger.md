@@ -21,7 +21,7 @@ what the agent writes: guided markdown lessons with inline quizzes, an
 integrated terminal into per-lesson Docker sandboxes, and automated
 checkpoint validation.
 
-![Supercharger home screen showing the sample SQL track and sample AI support prep](/Supercharger-docs/screenshots/home.png)
+![Supercharger home screen showing the sample SQL track and sample AI support prep](/screenshots/home.png)
 
 ## The core loop
 
@@ -40,19 +40,19 @@ checkpoint validation.
    Hands-on lessons are framed as realistic support tickets in deliberately
    messy sandboxed environments.
 
-   ![Track lessons list showing concept lessons, support tickets, and final assessment](/Supercharger-docs/screenshots/track-lessons.png)
+   ![Track lessons list showing concept lessons, support tickets, and final assessment](/screenshots/track-lessons.png)
 3. **Prove it.** "Check my work" runs validation inside the sandbox. Every
    track ends with a closed-book assessment that mirrors a real screen — pass
    it cold and you can honestly claim the skill in an interview.
 
-   ![Hands-on lesson with integrated terminal and checkpoint validation](/Supercharger-docs/screenshots/track-lesson-terminal.png)
+   ![Hands-on lesson with integrated terminal and checkpoint validation](/screenshots/track-lesson-terminal.png)
 
 ## "Prepare me for this job"
 
 Paste a job posting into the app, then ask your assistant to generate the
 prep. You get:
 
-![Job posting tab in a sample prep](/Supercharger-docs/screenshots/job-posting.png)
+![Job posting tab in a sample prep](/screenshots/job-posting.png)
 
 - **`analysis.md`** — requirements broken into skills, with inferred
   requirements explicitly flagged rather than silently guessed.
@@ -62,7 +62,7 @@ prep. You get:
   answers, the follow-up chains interviewers chain on, and talking points
   derived from reading between the lines of the posting.
 
-![Resume-to-posting map showing covered requirements, partial coverage, and gaps](/Supercharger-docs/screenshots/resume-to-posting-map.png)
+![Resume-to-posting map showing covered requirements, partial coverage, and gaps](/screenshots/resume-to-posting-map.png)
 
 ## What it is not
 

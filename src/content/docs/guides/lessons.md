@@ -11,7 +11,7 @@ end with **"Explain it"** prompts — say the answer out loud, in a minute,
 as if to an interviewer or customer. This verbal drilling is what turns
 knowledge into being *conversant*.
 
-![Track lesson list with concept lessons, support tickets, and final assessment](/Supercharger-docs/screenshots/track-lessons.png)
+![Track lesson list with concept lessons, support tickets, and final assessment](/screenshots/track-lessons.png)
 
 Mark theory lessons complete manually when you're confident.
 
@@ -31,7 +31,7 @@ needs.
   container and reports pass/fail per checkpoint, with hints on failure.
   When every checkpoint passes, the lesson is marked complete automatically.
 
-![Hands-on lesson with integrated terminal and checkpoint validation](/Supercharger-docs/screenshots/track-lesson-terminal.png)
+![Hands-on lesson with integrated terminal and checkpoint validation](/screenshots/track-lesson-terminal.png)
 
 ### The Files tab
 

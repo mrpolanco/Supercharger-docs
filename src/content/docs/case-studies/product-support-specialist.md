@@ -46,9 +46,9 @@ The job-prep workflow creates three documents:
 - `interview-prep.md` turns the role into likely questions, model answers,
   follow-up chains, and talking points.
 
-![Resume-to-posting map showing covered requirements, partial coverage, and gaps](/Supercharger-docs/screenshots/resume-to-posting-map.png)
+![Resume-to-posting map showing covered requirements, partial coverage, and gaps](/screenshots/resume-to-posting-map.png)
 
-![Generated interview prep tab for a sample AI support specialist prep](/Supercharger-docs/screenshots/interview-prep.png)
+![Generated interview prep tab for a sample AI support specialist prep](/screenshots/interview-prep.png)
 
 For a Product Support Specialist role, a strong plan might prioritize:
 
@@ -61,7 +61,7 @@ For a Product Support Specialist role, a strong plan might prioritize:
 5. LLM support judgment: explaining model limits clearly without overpromising
    or hiding uncertainty.
 
-![Curriculum tab showing suggested gap tracks for the sample prep](/Supercharger-docs/screenshots/prep-tracks.png)
+![Curriculum tab showing suggested gap tracks for the sample prep](/screenshots/prep-tracks.png)
 
 ## Flagship track idea
 
