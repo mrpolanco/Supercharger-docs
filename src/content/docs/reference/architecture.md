@@ -11,7 +11,7 @@ and the sandbox runner are the product; the app shell is disposable.**
 ```
 supercharger/
 ├── server/    # Node/Express - content APIs + Docker sandbox runner
-├── web/       # Vite + React - lesson UI, quizzes, xterm.js terminal
+├── web/       # Vite + React - lesson UI, quizzes, practice blocks, terminal
 ├── tracks/    # content: skill curricula (markdown/YAML)
 ├── preps/     # content: job preparation packs
 ├── SPEC.md    # content format contract
@@ -22,9 +22,9 @@ supercharger/
   sandboxes: `docker build` per lesson, `docker run` with resource caps, a
   pty over WebSocket (`/term`) for the terminal, and `docker exec check` for
   validation.
-- **Web (port 4401)** renders markdown lessons, parses `quiz` blocks, and
-  embeds xterm.js for sandbox lessons. It proxies all API and WebSocket
-  traffic to the server.
+- **Web (port 4401)** renders markdown lessons, parses `quiz` and `practice`
+  blocks, and embeds xterm.js for sandbox lessons. It proxies all API and
+  WebSocket traffic to the server.
 - **Content** never references either. An agent generates folders; the app
   picks them up on refresh.
 

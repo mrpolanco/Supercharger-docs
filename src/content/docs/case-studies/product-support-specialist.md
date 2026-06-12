@@ -11,7 +11,9 @@ quality, and judgment about model behavior.
 
 This case study shows how Supercharger frames that kind of role as a proof
 artifact: a structured skill map, realistic practice tickets, and validated
-work before claiming confidence.
+work before claiming confidence. The practice is not only terminal work: the
+learner also has to compare evidence, decide scope, and write support-safe
+updates.
 
 ## Role signal
 
@@ -91,14 +93,16 @@ learning becomes scattered docs, one-off explanations, and uneven confidence.
 Supercharger makes enablement concrete. A senior teammate or AI coding
 assistant can turn a recurring issue into a reusable track, add a deliberately
 messy sandbox, and write checks that validate the work. The next person does
-not just read the runbook; they practice the ticket and prove they can handle
-it.
+not just read the runbook; they practice the ticket, explain the evidence,
+write the update, and prove they can handle it.
 
 ## Verification over generation
 
 Supercharger does not trust AI output blindly. The assistant generates
 structured content against `SPEC.md` and `AGENTS.md`, but hands-on lessons are
-validated by executable checks in disposable sandboxes.
+validated by executable checks in disposable sandboxes. Structured practice
+blocks cover the judgment around the command line: diagnosis, timeline
+reasoning, escalation quality, and customer communication.
 
 That distinction matters. The generated lesson can explain the scenario, but
 the learner still has to solve the ticket. The check script is what turns "I
@@ -109,7 +113,7 @@ read about it" into "I can do it under realistic constraints."
 > I built Supercharger as a local-first technical learning tool for support
 > engineers. It uses AI to generate structured tracks from a job posting or
 > skill gap, then turns those tracks into realistic lessons with quizzes,
-> Docker-based sandboxes, and checkpoint validation. I built it partly to
-> sharpen my own support skill gaps, but also because I care about repeatable
-> technical enablement: the kind of internal foundation that helps support
-> teams grow with a fast-moving product.
+> structured practice prompts, Docker-based sandboxes, and checkpoint
+> validation. I built it partly to sharpen my own support skill gaps, but also
+> because I care about repeatable technical enablement: the kind of internal
+> foundation that helps support teams grow with a fast-moving product.

@@ -4,9 +4,9 @@ description: How to get high-quality skill tracks from your AI assistant.
 ---
 
 A track is a self-contained skill curriculum: ordered lessons, optional
-sandboxes, an interview question bank, tiered resources, and a closed-book
-final. You don't write it - your assistant does, against the contract in
-`AGENTS.md`.
+structured practice blocks, optional sandboxes, an interview question bank,
+tiered resources, and a closed-book final. You don't write it - your
+assistant does, against the contract in `AGENTS.md`.
 
 ## The basic ask
 
@@ -52,12 +52,15 @@ The home screen also helps you navigate a growing library:
    with "explain it out loud" prompts.
 2. **Scenario lessons** framed as realistic tickets in deliberately messy
    environments (NULLs, timezones, expired certs).
-3. **`interview-prep.md`** - questions with model answers *and the follow-up
+3. **Practice methods where useful** - case files, diagnosis-before-action
+   prompts, incident timelines, compare-and-explain drills, recall cards, or
+   written customer/escalation responses. Not every lesson needs every method.
+4. **`interview-prep.md`** - questions with model answers *and the follow-up
    chains* interviewers use.
-4. **`resources.md`** - the one book worth buying, the best free resource,
+5. **`resources.md`** - the one book worth buying, the best free resource,
    and what to skip.
-5. **A closed-book final assessment** mirroring a real screen.
-6. **No unexplained tools.** A tool a lesson uses but doesn't teach comes
+6. **A closed-book final assessment** mirroring a real screen.
+7. **No unexplained tools.** A tool a lesson uses but doesn't teach comes
    with a one-line survival hint at first mention (how to save and exit the
    editor, what flag includes headers); links go only to official references
    and only for concept-sized topics.
@@ -71,7 +74,9 @@ just files; iteration is cheap.
 The assistant decides per lesson. A lesson with a `sandbox/Dockerfile` gets a
 terminal pane and a **Check my work** button; the check logic runs entirely
 inside the container. Theory lessons render as markdown with inline quizzes
-and need no Docker at all.
+and need no Docker at all. Either kind of lesson can include structured
+practice blocks for the judgment around the work: what evidence matters, which
+hypothesis is safer, or how to write the customer update.
 
 ## Sandbox UX guarantees
 

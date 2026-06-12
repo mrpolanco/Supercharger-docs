@@ -7,7 +7,8 @@ Supercharger is an open-source, local-first technical enablement tool for
 support engineers, solutions engineers, SREs, TAMs, DevRel teams, and junior
 engineers. It helps turn skill gaps, role requirements, and recurring support
 issues into structured learning tracks with realistic practice tickets,
-quizzes, Docker sandboxes, and checkpoint validation.
+diagnosis drills, written responses, quizzes, Docker sandboxes, and checkpoint
+validation.
 
 Support teams are constantly learning: new products, new APIs, new failure
 modes, new customer environments. Supercharger turns that learning into
@@ -19,8 +20,8 @@ contract.** Your AI coding assistant (Claude Code, Codex, Gemini CLI - any
 agent that can read a repo) generates the curriculum on demand, following a
 documented format (`SPEC.md`) and quality bar (`AGENTS.md`). The app renders
 what the agent writes: guided markdown lessons with inline quizzes, an
-integrated terminal into per-lesson Docker sandboxes, and automated
-checkpoint validation.
+integrated terminal into per-lesson Docker sandboxes, structured practice
+blocks for technical judgment, and automated checkpoint validation.
 
 ![Supercharger home screen showing the sample SQL track and sample AI support prep](/screenshots/home.png)
 
@@ -38,6 +39,8 @@ checkpoint validation.
    ```
 2. **Learn in the app.** Concept lessons explain the *why* interviewers probe,
    end with "explain it out loud" prompts, and quiz for understanding.
+   Lessons can also include case files, timelines, diagnosis-before-action
+   prompts, compare-and-explain drills, and written support responses.
    Hands-on lessons are framed as realistic support tickets in deliberately
    messy sandboxed environments.
 
@@ -86,5 +89,6 @@ contract**. The spec constrains the format, the quality bar constrains the
 substance, and sandbox check scripts validate that exercises actually work.
 
 The assistant can generate a lesson, but the learner still has to solve the
-ticket and pass the checks. That is the important line: Supercharger emphasizes
-verified practice over generated confidence.
+ticket, explain the evidence, write the update, and pass the checks. That is
+the important line: Supercharger emphasizes verified practice over generated
+confidence.

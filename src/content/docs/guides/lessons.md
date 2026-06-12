@@ -1,6 +1,6 @@
 ---
 title: Working through a lesson
-description: The lesson UI, sandboxes, and checkpoint validation.
+description: The lesson UI, structured practice, sandboxes, and checkpoint validation.
 ---
 
 ## Theory lessons
@@ -14,6 +14,27 @@ knowledge into being *conversant*.
 ![Track lesson list with concept lessons, support tickets, and final assessment](/screenshots/track-lessons.png)
 
 Mark theory lessons complete manually when you're confident.
+
+## Structured practice blocks
+
+Some lessons include first-class practice prompts between the explanation and
+the terminal work. They are there for the parts of technical support that
+cannot be reduced to a command:
+
+- **Case files** collect ticket text, timelines, evidence, and deliverables
+  before you touch the environment.
+- **Diagnosis checkpoints** ask you to commit to likely hypotheses or next
+  checks before the terminal can become random poking.
+- **Compare-and-explain drills** make you choose between logs, configs,
+  summaries, or proposed fixes and explain the safer answer.
+- **Written-response prompts** help you turn evidence into customer updates,
+  internal handoffs, and engineering escalations.
+- **Recall drills** give you short interview-style review cards after the
+  main lesson work.
+
+These blocks are not used in every lesson. A SQL syntax concept may only need
+an explanation and quiz; a support ticket may need a case file, terminal work,
+and a written update.
 
 ## Sandbox lessons
 

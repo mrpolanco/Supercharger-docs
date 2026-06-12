@@ -23,15 +23,15 @@ through whatever assistant subscription you already have. The app itself is
 free, MIT-licensed, and fully local.
 
 **Do I need Docker?**
-Only for lessons with a terminal. Theory tracks (and the quiz/interview-prep
-portions of every track) work without Docker running.
+Only for lessons with a terminal. Markdown lessons, quizzes, structured
+practice blocks, and interview-prep pages work without Docker running.
 
 **How good is generated content, really?**
 The agent contract enforces structure (scenario tickets, interview banks,
-tiered resources, closed-book finals) and the check scripts verify exercises
-actually validate. Substance still varies with the model and your prompt -
-iterate: tell the assistant what's shallow and have it revise. The bundled SQL
-track is the calibration reference.
+tiered resources, closed-book finals, and appropriate practice blocks) and the
+check scripts verify exercises actually validate. Substance still varies with
+the model and your prompt - iterate: tell the assistant what's shallow and
+have it revise. The bundled SQL track is the calibration reference.
 
 **Does Supercharger trust AI-generated lessons?**
 No. The assistant writes content against a spec, but sandbox lessons still need

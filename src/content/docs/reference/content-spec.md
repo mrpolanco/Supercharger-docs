@@ -1,6 +1,6 @@
 ---
 title: Content spec
-description: The format contract for tracks, lessons, quizzes, sandboxes, and preps.
+description: The format contract for tracks, lessons, quizzes, practice blocks, sandboxes, and preps.
 ---
 
 This page summarizes `SPEC.md` - the contract between content and app.
@@ -27,6 +27,9 @@ Inside `lesson.md` bodies:
 
 - `> **Tip:** …` blockquotes render as highlighted callouts.
 - Conceptual sections end with **"Explain it"** verbal-articulation prompts.
+- Structured `practice` blocks render non-terminal practice such as case
+  files, written responses, diagnosis prompts, timelines, compare/explain
+  drills, and recall cards.
 - **Tool mentions**: when a lesson *uses* a tool it doesn't *teach*, it gives
   a one-line survival hint at first mention (e.g. *"`nano` - Ctrl+O saves,
   Ctrl+X exits"*) rather than assuming familiarity. External links are
@@ -53,6 +56,40 @@ A fenced code block with language `quiz` containing **valid JSON**:
 ````
 
 `answer` is the zero-based index of the correct option.
+
+## Practice blocks
+
+A fenced code block with language `practice` containing **valid JSON**:
+
+````markdown
+```practice
+{
+  "type": "response",
+  "title": "Write the customer update",
+  "prompt": "Draft a concise update after confirming the root cause.",
+  "evidence": ["The export query excludes rows where internal_test is NULL."],
+  "deliverable": ["Name impact", "Explain root cause", "Give next step"],
+  "rubric": ["Cites evidence", "Avoids blame", "Does not overpromise"],
+  "modelAnswer": "The missing rows were caused by..."
+}
+```
+````
+
+Supported `type` values:
+
+| Type | Use it for |
+|---|---|
+| `incident` | Case files, handoff packets, ticket evidence, and incident timelines. |
+| `diagnosis` | Pre-action checkpoints where the learner commits to likely hypotheses or next checks. |
+| `response` | Customer updates, internal summaries, escalations, and handoff drafts. |
+| `compare` | Comparing logs, configs, traces, proposed fixes, or support replies. |
+| `timeline` | Causality and scope drills around ordered events. |
+| `recall` | Short review cards or interview drills. |
+
+Common fields are `title`, `prompt`, `evidence`, `timeline`, `options`,
+`deliverable`, `rubric`, and `modelAnswer`. Not every field is required.
+`modelAnswer` should coach after the learner drafts an answer; closed-book
+final assessments should not include model notes or revealing rubric items.
 
 ## Sandboxes
 
