@@ -77,6 +77,7 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						{ label: 'Generating a track', slug: 'guides/generating-a-track' },
+						{ label: 'Sharing tracks', slug: 'guides/sharing-tracks' },
 						{ label: 'Slash commands', slug: 'guides/slash-commands' },
 						{ label: 'Prepare me for this job', slug: 'guides/job-prep' },
 						{ label: 'Product docs onboarding', slug: 'guides/product-docs-onboarding' },

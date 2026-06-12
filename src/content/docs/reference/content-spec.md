@@ -11,7 +11,7 @@ everything ports unchanged to any future implementation.
 
 ```
 tracks/<track-id>/
-├── track.yaml            # title, description, optional provenance, ordered lesson list
+├── track.yaml            # title, description, sharing metadata, ordered lesson list
 ├── <lesson-id>/
 │   ├── lesson.md         # frontmatter (title) + GFM body
 │   └── sandbox/          # optional - Dockerfile presence enables the terminal
@@ -20,6 +20,31 @@ tracks/<track-id>/
 ├── interview-prep.md     # recommended
 └── resources.md          # recommended
 ```
+
+## Track metadata
+
+`track.yaml` is the track's table of contents and sharing metadata:
+
+```yaml
+title: SQL Data Investigation for Support Engineers
+description: Practice support-grade SQL against realistic customer data.
+level: beginner
+depth: standard
+icon: disk
+author: Support Enablement Team
+license: Internal use only
+version: 1.0.0
+sourceUrl: https://github.com/acme/support-curriculum
+tags: [sql, support, data-investigation]
+lessons:
+  - 01-thinking-in-tables
+  - 02-select-and-filter
+```
+
+For local-only tracks, `author`, `license`, `version`, `sourceUrl`, and
+`tags` are optional. For shared tracks, include them so recipients know who
+maintains the curriculum, what reuse is allowed, where updates live, and what
+topic or role the track covers.
 
 ## Lesson conventions
 
