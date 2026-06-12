@@ -23,7 +23,7 @@ what the agent writes: guided markdown lessons with inline quizzes, an
 integrated terminal into per-lesson Docker sandboxes, structured practice
 blocks for technical judgment, and automated checkpoint validation.
 
-![Supercharger home screen showing the sample SQL track and sample AI support prep](/screenshots/home.png)
+![Supercharger home screen showing sample tracks and a sample AI support prep](/screenshots/home.png)
 
 ## The core loop
 
