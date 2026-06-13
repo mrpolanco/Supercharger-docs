@@ -107,6 +107,35 @@ If you cannot find the old terminal, ask your agent:
 Find and stop the stale Supercharger processes on ports 4400 and 4401, then restart npm run dev.
 ```
 
+### Another device cannot open Supercharger
+
+Likely causes:
+
+- **Other devices** access is still off.
+- Supercharger has not been restarted since changing the setting.
+- The other device is not on the same local network.
+- A firewall is blocking ports `4401` or `4400`.
+
+Fix:
+
+1. Start Supercharger with the normal launcher:
+
+   ```bash
+   npm run dev
+   ```
+
+2. In the top bar, turn on **Other devices**.
+3. Restart Supercharger from the top bar, or press **Ctrl+C** and run
+   `npm run dev` again.
+4. Open the LAN URL shown in the top bar, for example:
+
+   ```text
+   http://192.168.1.25:4401
+   ```
+
+Only enable this on a trusted network. Anyone who can reach the app can view
+local tracks and preps, import tracks, and start sandbox exercises.
+
 ### A prep exists, but analysis or plan tabs are missing
 
 Likely cause: the GUI only saved the inputs. The agent has not generated the

@@ -146,8 +146,12 @@ prep as tabs in the app - plus new tracks for any skills nothing covers yet.
 - The **Files** tab next to the terminal lets you browse and edit the
   sandbox's `/work` files in the browser - no `vim` required unless the
   lesson is teaching it.
-- The top bar has a **light/dark mode** toggle and a **Stop server** button
-  that shuts everything down and removes all sandbox containers.
+- The top bar has a **light/dark mode** toggle, an **Other devices** access
+  toggle, and a **Stop server** button that shuts everything down and removes
+  all sandbox containers.
+- **Other devices** is off by default. Turn it on only on a trusted local
+  network, then restart Supercharger. Anyone who can reach the app can view
+  local tracks and preps, import tracks, and start sandbox exercises.
 - Progress lives in `progress.json`; content updates never touch it.
 
 If something does not appear, a button waits forever, or a sandbox fails to
